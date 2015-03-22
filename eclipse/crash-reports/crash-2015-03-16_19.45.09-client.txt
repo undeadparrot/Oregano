@@ -1,0 +1,95 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 3/16/15 7:45 PM
+Description: Unexpected error
+
+java.lang.ArrayIndexOutOfBoundsException: 64
+	at com.parrot.oregano.block.BlockCanvas.onBlockActivated(BlockCanvas.java:71)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.onPlayerRightClick(PlayerControllerMP.java:376)
+	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1518)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2033)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1028)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:951)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.parrot.oregano.block.BlockCanvas.onBlockActivated(BlockCanvas.java:71)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.onPlayerRightClick(PlayerControllerMP.java:376)
+	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1518)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player421'/64844, l='MpServer', x=-84.82, y=83.62, z=279.04]]
+	Chunk stats: MultiplayerChunkCache: 49, 49
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-28,64,256), Chunk: (at 4,4,0 in -2,16; contains blocks -32,0,256 to -17,255,271), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 179810 game time, 15627 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 51 total; [EntitySkeleton['Skeleton'/64624, l='MpServer', x=-81.90, y=35.00, z=258.50], EntityItem['item.tile.torch'/64625, l='MpServer', x=-87.16, y=79.13, z=280.78], EntityItemFrame['entity.ItemFrame.name'/64626, l='MpServer', x=-89.50, y=80.50, z=277.06], EntityItemFrame['entity.ItemFrame.name'/64627, l='MpServer', x=-89.50, y=81.50, z=277.06], EntityItemFrame['entity.ItemFrame.name'/64628, l='MpServer', x=-90.50, y=80.50, z=277.06], EntityItemFrame['entity.ItemFrame.name'/64629, l='MpServer', x=-90.50, y=81.50, z=277.06], EntityItemFrame['entity.ItemFrame.name'/64630, l='MpServer', x=-88.50, y=80.50, z=277.06], EntityItemFrame['entity.ItemFrame.name'/64631, l='MpServer', x=-88.50, y=81.50, z=277.06], EntityBat['Bat'/64572, l='MpServer', x=-127.46, y=58.78, z=230.18], EntityItemFrame['entity.ItemFrame.name'/64632, l='MpServer', x=-87.50, y=81.50, z=277.06], EntityBat['Bat'/64573, l='MpServer', x=-133.75, y=61.10, z=224.75], EntityItemFrame['entity.ItemFrame.name'/64633, l='MpServer', x=-87.50, y=80.50, z=278.06], EntityPig['Pig'/64574, l='MpServer', x=-133.53, y=76.00, z=236.50], EntityZombie['Zombie'/64634, l='MpServer', x=-86.25, y=23.00, z=335.84], EntitySkeleton['Skeleton'/64575, l='MpServer', x=-140.50, y=50.00, z=250.50], EntitySheep['Sheep'/64689, l='MpServer', x=-44.56, y=82.00, z=235.97], EntityChicken['Chicken'/64688, l='MpServer', x=-41.56, y=73.34, z=236.59], EntityChicken['Chicken'/64570, l='MpServer', x=-138.44, y=75.00, z=228.30], EntityBat['Bat'/64571, l='MpServer', x=-140.84, y=27.10, z=227.25], EntitySlime['Slime'/64690, l='MpServer', x=-40.78, y=14.00, z=312.22], EntityChicken['Chicken'/64680, l='MpServer', x=-48.65, y=69.00, z=303.65], EntityChicken['Chicken'/64681, l='MpServer', x=-46.64, y=80.00, z=325.53], EntitySkeleton['Skeleton'/64676, l='MpServer', x=-57.47, y=70.00, z=292.98], EntityChicken['Chicken'/64616, l='MpServer', x=-106.47, y=72.00, z=275.59], EntityCreeper['Creeper'/64677, l='MpServer', x=-56.28, y=69.00, z=295.50], EntitySkeleton['Skeleton'/64678, l='MpServer', x=-63.47, y=12.00, z=312.13], EntityZombie['Zombie'/64679, l='MpServer', x=-49.50, y=44.00, z=304.50], EntitySkeleton['Skeleton'/64623, l='MpServer', x=-94.50, y=55.00, z=241.50], EntitySlime['Slime'/64675, l='MpServer', x=-62.31, y=41.00, z=241.31], EntityZombie['Zombie'/64595, l='MpServer', x=-122.66, y=39.00, z=226.34], EntitySquid['Squid'/64598, l='MpServer', x=-124.50, y=46.00, z=285.50], EntitySquid['Squid'/64599, l='MpServer', x=-121.50, y=46.38, z=282.50], EntityBat['Bat'/64596, l='MpServer', x=-112.51, y=56.85, z=246.67], EntitySquid['Squid'/64597, l='MpServer', x=-126.50, y=46.34, z=284.50], EntitySquid['Squid'/64602, l='MpServer', x=-122.78, y=46.44, z=284.56], EntitySquid['Squid'/64603, l='MpServer', x=-121.50, y=46.00, z=283.75], EntitySquid['Squid'/64600, l='MpServer', x=-120.50, y=47.31, z=283.69], EntitySquid['Squid'/64601, l='MpServer', x=-124.50, y=47.00, z=281.50], EntityClientPlayerMP['Player421'/64844, l='MpServer', x=-84.82, y=83.62, z=279.04], EntityChicken['Chicken'/64604, l='MpServer', x=-127.47, y=83.00, z=324.56], EntityBat['Bat'/64579, l='MpServer', x=-132.25, y=18.10, z=289.75], EntityBat['Bat'/64578, l='MpServer', x=-128.38, y=16.00, z=285.98], EntitySheep['Sheep'/64652, l='MpServer', x=-69.47, y=83.00, z=230.47], EntityChicken['Chicken'/64577, l='MpServer', x=-140.56, y=78.00, z=255.56], EntitySkeleton['Skeleton'/64576, l='MpServer', x=-140.50, y=50.00, z=251.50], EntityChicken['Chicken'/64583, l='MpServer', x=-138.56, y=75.00, z=296.47], EntityPig['Pig'/64582, l='MpServer', x=-138.34, y=75.00, z=289.97], EntityBat['Bat'/64581, l='MpServer', x=-136.51, y=46.29, z=296.48], EntityZombie['Zombie'/64580, l='MpServer', x=-140.50, y=37.00, z=299.50], EntityPig['Pig'/64585, l='MpServer', x=-134.83, y=77.00, z=305.04], EntityZombie['Zombie'/64584, l='MpServer', x=-139.50, y=75.00, z=294.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2555)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:980)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.7.0_60, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 803907720 bytes (766 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 103
+	FML: MCP v9.05 FML v7.10.85.1291 Minecraft Forge 10.13.2.1291 4 mods loaded, 4 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	FML{7.10.85.1291} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.2.1291.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	Forge{10.13.2.1291} [Minecraft Forge] (forgeSrc-1.7.10-10.13.2.1291.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	oregano{1.7.10-10.13.2.1291} [Oregano Mod Garden] (Oregano) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: AMD Radeon R9 200 Series GL version 4.4.12967 Compatibility Profile Context 14.200.1004.0, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

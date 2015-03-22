@@ -1,0 +1,16 @@
+[
+{
+  "modid": "oregano",
+  "name": "Oregano Mod Garden",
+  "description": "A potpourri of moddymods.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Parrot"],
+  "credits": "The Forge and FML guys, and Pahimar for his fine tutorials",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
