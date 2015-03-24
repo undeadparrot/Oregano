@@ -22,8 +22,8 @@ import java.util.Map;
  */
 public class TileEntityCanvas extends TileEntityOregano {
 
-    public int width = 24;
-    public int height= 24;
+    public int width = 32;
+    public int height= 32;
     public int[] data;
 
     public Vec3 testPosition;
@@ -96,5 +96,6 @@ public class TileEntityCanvas extends TileEntityOregano {
         list[1]=AxisAlignedBB.getBoundingBox(0.4F,0.0F,0.15F,0.25F,0.25F,0.25F);
         return list ;
     }
+
 
 }

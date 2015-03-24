@@ -1,31 +1,33 @@
 package com.parrot.oregano.network.message;
 
+import cpw.mods.fml.common.network.ByteBufUtils;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufUtil;
 
 /**
  * Created by Shane on 3/22/2015.
  */
-public class MessageClientBlockInteractionByte implements IMessage{
+public class MessageBlockInteractionTextToServer implements IMessage{
 
-    public byte action;
-    public int x,y,z;
+    String text;
+    int x,y,z;
 
-    public MessageClientBlockInteractionByte()
+    public MessageBlockInteractionTextToServer()
     {
 
     }
 
-    public MessageClientBlockInteractionByte(byte _action, int _x, int _y, int _z)
+    public MessageBlockInteractionTextToServer(String _text, int _x, int _y, int _z)
     {
-        action=_action;
+        text=_text;
         x=_x;y=_y;z=_z;
     }
 
     @Override
     public void fromBytes(ByteBuf buf) {
 
-        action=buf.readByte();
+        text= ByteBufUtils.readUTF8String(buf);
 
         x=buf.readInt();
         y=buf.readInt();
@@ -36,7 +38,7 @@ public class MessageClientBlockInteractionByte implements IMessage{
     @Override
     public void toBytes(ByteBuf buf) {
 
-        buf.writeByte(action);
+        ByteBufUtils.writeUTF8String(buf,text);
 
         buf.writeInt(x);
         buf.writeInt(y);

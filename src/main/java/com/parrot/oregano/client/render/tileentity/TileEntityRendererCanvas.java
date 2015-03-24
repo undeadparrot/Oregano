@@ -1,6 +1,7 @@
 package com.parrot.oregano.client.render.tileentity;
 
 import com.parrot.oregano.block.BlockCanvas;
+import com.parrot.oregano.client.render.DynamicTextureRegister;
 import com.parrot.oregano.tileentity.TileEntityCanvas;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.gui.FontRenderer;
@@ -21,26 +22,24 @@ import java.util.Map;
  * Created by Shane on 3/14/2015.
  */
 public class TileEntityRendererCanvas extends TileEntitySpecialRenderer {
+
+
+
     @Override
     public void renderTileEntityAt(TileEntity entity, double x, double y, double z, float f) {
 
+
+
         TileEntityCanvas tileEntity=(TileEntityCanvas)entity;
 
+        TextureManager texManager= FMLClientHandler.instance().getClient().getTextureManager();
 
 
         GL11.glPushMatrix();
 
 
-            BufferedImage bufferedImage= new BufferedImage(tileEntity.width,tileEntity.height,BufferedImage.TYPE_3BYTE_BGR);
 
-            for(int i=0;i<tileEntity.width;i++) {
-                for(int j=0;j<tileEntity.height;j++) {
-                    int pix= i+(j*tileEntity.width);
-                    bufferedImage.setRGB(i,j,tileEntity.data[pix]);
-                    //bufferedImage.setRGB(i,j,(i%2==j%2)?Color.PINK.getRGB():Color.lightGray.getRGB())
-                }
-
-            }
+        DynamicTextureRegister.getInstance().updateDynamicTexture("canwors" ,tileEntity.width, tileEntity.height,tileEntity.data);
 
 
 //            DynamicTexture dynamicTexture = new DynamicTexture(4, 4);
@@ -53,12 +52,12 @@ public class TileEntityRendererCanvas extends TileEntitySpecialRenderer {
 //
 
 
+            //dynamicTexture = new DynamicTexture(64,64);//bufferedImage);
+            //dynamicTextureLocation=texManager.getDynamicTextureLocation("canwors",dynamicTexture);
+        //texManager.new DynamicTexture(64,64);
 
-            DynamicTexture dynamicTexture = new DynamicTexture(bufferedImage);
-
-            TextureManager texManager=FMLClientHandler.instance().getClient().getTextureManager();
-            ResourceLocation dynamicTextureLocation=texManager.getDynamicTextureLocation("canwors",dynamicTexture);
-            texManager.bindTexture(dynamicTextureLocation);
+            texManager.bindTexture(
+                    DynamicTextureRegister.getInstance().getResourceLocation("canwors" ,tileEntity.width,tileEntity.height));
 
             GL11.glTranslatef((float) x , (float) y , (float) z);
             GL11.glTranslatef( 0.5F , 0.0F , 0.5F);
@@ -101,6 +100,8 @@ public class TileEntityRendererCanvas extends TileEntitySpecialRenderer {
                 //tessellateCenteredCubeWithUV(tessellator,1.0F,1.0F, BlockCanvas.thickness,0.0F,0.0F,1.0F);
 
             GL11.glPopMatrix();
+
+            texManager.bindTexture(new ResourceLocation("textures/gui/container/anvil.png"));
 
         GL11.glPopMatrix();
 

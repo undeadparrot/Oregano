@@ -1,4 +1,4 @@
-package com.parrot.oregano.gui;
+package com.parrot.oregano.gui.config;
 
 import com.parrot.oregano.Oregano;
 import com.parrot.oregano.handler.ConfigurationHandler;

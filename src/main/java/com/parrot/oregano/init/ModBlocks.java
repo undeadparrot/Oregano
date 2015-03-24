@@ -2,6 +2,7 @@ package com.parrot.oregano.init;
 
 import com.parrot.oregano.Oregano;
 import com.parrot.oregano.block.*;
+import com.parrot.oregano.block.mc.BlockMcSignDouble;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
@@ -15,6 +16,7 @@ public class ModBlocks {
     public static final BlockOregano blob = new BlockBlob();
     public static final BlockOregano canvas = new BlockCanvas();
     public static final BlockPoster poster = new BlockPoster();
+    public static final BlockMcSignDouble mcsigndouble = new BlockMcSignDouble();
 
     public static void init()
     {
@@ -22,6 +24,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(blob,"blob");
         GameRegistry.registerBlock(canvas,"canvas");
         GameRegistry.registerBlock(poster,"poster");
+        GameRegistry.registerBlock(mcsigndouble,"mcsigndouble");
     }
 
 }

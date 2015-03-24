@@ -192,7 +192,8 @@ public class BlockCanvas extends BlockOregano implements ITileEntityProvider{
 
         }
         //LogHelper.info("intersectionA=" +poi);
-        //LogHelper.info("intersectionB=" + intersectLinePlane(lineP1, lookVec, 2.0F, planeP1, planeP3, planeP2));
+        //LogHelper.info("intersectionB=" + );
+        poi=intersectLinePlane(lineP1, lookVec, 2.0F, planeP1, planeP3, planeP2);
 
         AxisAlignedBB aabb=AxisAlignedBB.getBoundingBox(x,y,z,x+0.5F,y+0.5F,z+0.5F);
         LogHelper.info("AABBINTERCEPT:"+aabb.calculateIntercept(lineP1,lineP2));
@@ -213,6 +214,8 @@ public class BlockCanvas extends BlockOregano implements ITileEntityProvider{
         //LogHelper.info("headpoint"+headPoint+"   testposition"+tileEntity.testPosition+" ___ ");
 
         if(poi!=null) {
+            poiLocal=Vec3.createVectorHelper(poi.xCoord-planeP1.xCoord,poi.yCoord-planeP1.yCoord,poi.zCoord-planeP1.zCoord);
+            poiNormalized=Vec3.createVectorHelper(poiLocal.xCoord/planeSize.xCoord,poiLocal.yCoord/planeSize.yCoord,poiLocal.zCoord/planeSize.zCoord);
             int w = tileEntity.width;
             int h = tileEntity.height;
             int pixx = (int) (poiNormalized.xCoord * w);

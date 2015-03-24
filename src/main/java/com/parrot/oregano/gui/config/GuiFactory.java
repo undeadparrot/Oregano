@@ -1,4 +1,4 @@
-package com.parrot.oregano.gui;
+package com.parrot.oregano.gui.config;
 
 import cpw.mods.fml.client.IModGuiFactory;
 import net.minecraft.client.Minecraft;
