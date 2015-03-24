@@ -2,9 +2,11 @@ package com.parrot.oregano.init;
 
 import com.parrot.oregano.Oregano;
 import com.parrot.oregano.client.render.tileentity.TileEntityRendererBlob;
+import com.parrot.oregano.client.render.tileentity.TileEntityRendererBottleRack;
 import com.parrot.oregano.client.render.tileentity.TileEntityRendererCanvas;
 import com.parrot.oregano.client.render.tileentity.TileEntityRendererMcSignDouble;
 import com.parrot.oregano.tileentity.TileEntityBlob;
+import com.parrot.oregano.tileentity.TileEntityBottleRack;
 import com.parrot.oregano.tileentity.TileEntityCanvas;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -23,6 +25,7 @@ public class ModTileEntitySpecialRenderers {
     public static int renderidBlob;
     public static int renderidCanvas;
     public static int renderidMcSignDouble;
+    public static int renderidBottleRack;
 
     public static void init()
     {
@@ -31,7 +34,9 @@ public class ModTileEntitySpecialRenderers {
         renderidCanvas=RenderingRegistry.getNextAvailableRenderId();
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCanvas.class,new TileEntityRendererCanvas());
         renderidMcSignDouble=RenderingRegistry.getNextAvailableRenderId();
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySign.class,new TileEntityRendererMcSignDouble());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySign.class,new TileEntityRendererMcSignDouble());//TODO:Make a separate tileentity for my centered sign
+        renderidBottleRack=RenderingRegistry.getNextAvailableRenderId();
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBottleRack.class,new TileEntityRendererBottleRack());
 
 
     }

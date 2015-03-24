@@ -1,10 +1,7 @@
 package com.parrot.oregano.init;
 
 import com.parrot.oregano.Oregano;
-import com.parrot.oregano.tileentity.TileEntityBlob;
-import com.parrot.oregano.tileentity.TileEntityCanvas;
-import com.parrot.oregano.tileentity.TileEntityOregano;
-import com.parrot.oregano.tileentity.TileEntityPoster;
+import com.parrot.oregano.tileentity.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.tileentity.TileEntity;
 
@@ -18,5 +15,7 @@ public class ModTileEntities {
         GameRegistry.registerTileEntity(TileEntityBlob.class,"blob");
         GameRegistry.registerTileEntity(TileEntityCanvas.class,"canvas");
         GameRegistry.registerTileEntity(TileEntityPoster.class,"poster");
+        GameRegistry.registerTileEntity(TileEntityBottleRack.class,"bottlerack");
+
     }
 }

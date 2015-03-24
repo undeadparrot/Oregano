@@ -17,6 +17,7 @@ public class ModBlocks {
     public static final BlockOregano canvas = new BlockCanvas();
     public static final BlockPoster poster = new BlockPoster();
     public static final BlockMcSignDouble mcsigndouble = new BlockMcSignDouble();
+    public static final BlockBottleRack bottlerack = new BlockBottleRack();
 
     public static void init()
     {
@@ -25,6 +26,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(canvas,"canvas");
         GameRegistry.registerBlock(poster,"poster");
         GameRegistry.registerBlock(mcsigndouble,"mcsigndouble");
+        GameRegistry.registerBlock(bottlerack,"bottlerack");
     }
 
 }

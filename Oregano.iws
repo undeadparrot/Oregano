@@ -1,141 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="424b4757-2f4c-4d2c-895e-3a832df8cc78" name="Default" comment="Added text to GuiPoster&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockBottleRack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/mc/BlockMcSignDouble.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/DynamicTextureRegister.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/message/MessageGuiOpenToClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/messagehandler/MessageHandlerGuiOpenToClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererMcSignDouble.java" />
-      <change type="DELETED" beforePath="C:\Projects\Minecraft\Oregano\out\production\Oregano\com\parrot\oregano\gui\GuiFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Minecraft\Oregano\out\production\Oregano\com\parrot\oregano\gui\ModGuiConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Minecraft\Oregano\out\production\Oregano\com\parrot\oregano\gui\guihandler\GuiHandlerOregano.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Minecraft\Oregano\out\production\Oregano\com\parrot\oregano\network\message\MessageClientBlockInteractionByte.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Minecraft\Oregano\out\production\Oregano\com\parrot\oregano\network\message\MessageClientBlockInteractionText.class" afterPath="" />
-      <change type="MOVED" beforePath="C:\Projects\Minecraft\Oregano\src\main\java\com\parrot\oregano\gui\GuiFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/config/GuiFactory.java" />
-      <change type="MOVED" beforePath="C:\Projects\Minecraft\Oregano\src\main\java\com\parrot\oregano\gui\ModGuiConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/config/ModGuiConfig.java" />
-      <change type="MOVED" beforePath="C:\Projects\Minecraft\Oregano\src\main\java\com\parrot\oregano\gui\guihandler\GuiHandlerOregano.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/GuiHandlerOregano.java" />
-      <change type="MOVED" beforePath="C:\Projects\Minecraft\Oregano\src\main\java\com\parrot\oregano\network\message\MessageClientBlockInteractionByte.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/message/MessageBlockInteractionByteToServer.java" />
-      <change type="MOVED" beforePath="C:\Projects\Minecraft\Oregano\src\main\java\com\parrot\oregano\network\message\MessageClientBlockInteractionText.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/message/MessageBlockInteractionTextToServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/03ba29a1-d6bd-32ba-90b2-375e4d65abc9.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/03ba29a1-d6bd-32ba-90b2-375e4d65abc9.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/04ba6478-628e-32a2-915d-0b45ca8b366b.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/04ba6478-628e-32a2-915d-0b45ca8b366b.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/08e49200-0644-3742-931a-94fcbb560d07.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/08e49200-0644-3742-931a-94fcbb560d07.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/0f12271c-8f6c-3b4a-9805-4e9544c8a791.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/0f12271c-8f6c-3b4a-9805-4e9544c8a791.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/1178851a-8246-318e-85f8-1ae4517330a2.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/1178851a-8246-318e-85f8-1ae4517330a2.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/logs/2015-03-22-1.log.gz" afterPath="$PROJECT_DIR$/eclipse/logs/2015-03-22-1.log.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/logs/2015-03-22-2.log.gz" afterPath="$PROJECT_DIR$/eclipse/logs/2015-03-22-2.log.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/logs/2015-03-22-3.log.gz" afterPath="$PROJECT_DIR$/eclipse/logs/2015-03-22-3.log.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/logs/2015-03-22-4.log.gz" afterPath="$PROJECT_DIR$/eclipse/logs/2015-03-22-4.log.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/logs/2015-03-22-5.log.gz" afterPath="$PROJECT_DIR$/eclipse/logs/2015-03-22-5.log.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/logs/2015-03-22-6.log.gz" afterPath="$PROJECT_DIR$/eclipse/logs/2015-03-22-6.log.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/logs/2015-03-22-7.log.gz" afterPath="$PROJECT_DIR$/eclipse/logs/2015-03-22-7.log.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/2210beb6-4dc2-38a8-8f45-f0cb49bb6846.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/2210beb6-4dc2-38a8-8f45-f0cb49bb6846.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/2654e3c3-150d-3857-a426-0b141796a4e0.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/2654e3c3-150d-3857-a426-0b141796a4e0.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/29aa321a-1ce7-35de-bfab-f37fa4095c7d.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/29aa321a-1ce7-35de-bfab-f37fa4095c7d.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/37815b4b-a277-3e88-89c9-687629f7c447.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/37815b4b-a277-3e88-89c9-687629f7c447.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/3c098a03-04cc-31fd-856f-be4ccab4daf7.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/3c098a03-04cc-31fd-856f-be4ccab4daf7.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/3c604947-c962-3363-b382-8bb20e72179d.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/3c604947-c962-3363-b382-8bb20e72179d.dat" />
+    <list default="true" id="424b4757-2f4c-4d2c-895e-3a832df8cc78" name="Default" comment="3D OBJ models. Huzzah! Also early experiments with Carpenters Block style texturing.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/util/FurnitureHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModModels.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityBottleRack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererBottleRack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/3f66a67c-db6c-36b7-b762-d7a40c17883b.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/3f66a67c-db6c-36b7-b762-d7a40c17883b.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/41196538-4c2b-371d-b141-0e51ad033fac.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/41196538-4c2b-371d-b141-0e51ad033fac.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/45c2c1e2-9dd4-3d62-8e53-82e2b4b32b4a.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/45c2c1e2-9dd4-3d62-8e53-82e2b4b32b4a.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/4bf8ac1c-047f-3d7f-9946-705bc571459f.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/4bf8ac1c-047f-3d7f-9946-705bc571459f.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/5d6f5056-9d82-3950-9ee4-6a4e4ed3cf33.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/5d6f5056-9d82-3950-9ee4-6a4e4ed3cf33.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/6b70ab1d-ea1f-3080-82f2-6a9952eea911.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/6b70ab1d-ea1f-3080-82f2-6a9952eea911.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/6ecd1629-dee4-373d-9457-481bd36b0826.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/6ecd1629-dee4-373d-9457-481bd36b0826.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/9a9101ac-937d-31fc-99f0-be5bc89dd1bc.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/9a9101ac-937d-31fc-99f0-be5bc89dd1bc.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/block/BlockCanvas.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/block/BlockCanvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/block/BlockPoster.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/block/BlockPoster.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/proxy/CommonProxy.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/proxy/CommonProxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/gui/guiscreen/GuiPoster.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/gui/guiscreen/GuiPoster.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/network/messagehandler/MessageHandlerClientBlockInteractionByte.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/network/messagehandler/MessageHandlerClientBlockInteractionByte.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/905847c0-6737-32d8-85e6-3f64ecd32033.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/905847c0-6737-32d8-85e6-3f64ecd32033.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/init/ModBlocks.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/init/ModBlocks.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/init/ModTileEntities.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/init/ModTileEntities.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/init/ModTileEntitySpecialRenderers.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/init/ModTileEntitySpecialRenderers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/Oregano.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/Oregano.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/network/PacketHandler.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/network/PacketHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/tileentity/TileEntityCanvas.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/tileentity/TileEntityCanvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/client/render/tileentity/TileEntityRendererCanvas.class" afterPath="$PROJECT_DIR$/out/production/Oregano/com/parrot/oregano/client/render/tileentity/TileEntityRendererCanvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/a129ebab-93ca-3ac8-86a9-47cce1be86d0.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/a129ebab-93ca-3ac8-86a9-47cce1be86d0.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/a2d3cb04-2e77-32ea-a568-7872ba7e9c5c.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/a2d3cb04-2e77-32ea-a568-7872ba7e9c5c.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/ac42e7c5-bf90-3ead-ba50-c551df161044.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/ac42e7c5-bf90-3ead-ba50-c551df161044.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/ad4a30d4-53bd-30c6-b482-5d77fb42b2d7.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/ad4a30d4-53bd-30c6-b482-5d77fb42b2d7.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/bd11acc2-8e1a-348b-89a6-a309159aa437.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/bd11acc2-8e1a-348b-89a6-a309159aa437.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/bf0c47d3-02b6-3463-8e38-457226b1407c.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/bf0c47d3-02b6-3463-8e38-457226b1407c.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/ca560dd3-ebf9-3fc9-b2e6-088534082c81.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/ca560dd3-ebf9-3fc9-b2e6-088534082c81.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d2fd1c5d-4760-35a0-aa0f-c197e25af2ac.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d2fd1c5d-4760-35a0-aa0f-c197e25af2ac.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d566deca-6b21-32cb-af90-4edf09eeac2e.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d566deca-6b21-32cb-af90-4edf09eeac2e.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d60321ce-54ba-31e5-bac3-cbb6a732015a.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d60321ce-54ba-31e5-bac3-cbb6a732015a.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d75ffc85-72b0-3b94-be32-d104d89a3a6a.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d75ffc85-72b0-3b94-be32-d104d89a3a6a.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d96be705-d0ae-31d3-afba-31a637d80f6d.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/d96be705-d0ae-31d3-afba-31a637d80f6d.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/e2fd3051-a7ee-3ec9-ae1f-a1b6240b0501.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/e2fd3051-a7ee-3ec9-ae1f-a1b6240b0501.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/e5a660b6-9d51-36ee-858e-f73e02a3f36f.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/e5a660b6-9d51-36ee-858e-f73e02a3f36f.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/e7c5c79a-91ee-3db1-afe8-a6ff4d4f15fa.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/e7c5c79a-91ee-3db1-afe8-a6ff4d4f15fa.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/f79c4f00-774e-3daf-ac9c-aebcbcc29c64.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/f79c4f00-774e-3daf-ac9c-aebcbcc29c64.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/f8a1463c-07b2-3433-918f-386b8accf0f1.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/f8a1463c-07b2-3433-918f-386b8accf0f1.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/fe207da4-45aa-3a2a-bf67-72a700290388.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/fe207da4-45aa-3a2a-bf67-72a700290388.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/fe736038-102e-365b-a97e-eabc472944ec.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/fe736038-102e-365b-a97e-eabc472944ec.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/level.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/level.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_old" afterPath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_old" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/region/r.-1.-1.mca" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/region/r.-1.-1.mca" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/region/r.-1.0.mca" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/region/r.-1.0.mca" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-1.0.mca" afterPath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-1.0.mca" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/region/r.0.-1.mca" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/region/r.0.-1.mca" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/region/r.0.0.mca" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/region/r.0.0.mca" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.0.mca" afterPath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.0.mca" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/session.lock" afterPath="$PROJECT_DIR$/eclipse/saves/New World/session.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/data/villages.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM-1/data/villages.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM1/data/villages.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM1/data/villages.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/data/villages.dat" afterPath="$PROJECT_DIR$/eclipse/saves/New World/data/villages.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/03ba29a1-d6bd-32ba-90b2-375e4d65abc9.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/03ba29a1-d6bd-32ba-90b2-375e4d65abc9.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/04ba6478-628e-32a2-915d-0b45ca8b366b.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/04ba6478-628e-32a2-915d-0b45ca8b366b.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/08e49200-0644-3742-931a-94fcbb560d07.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/08e49200-0644-3742-931a-94fcbb560d07.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/0f12271c-8f6c-3b4a-9805-4e9544c8a791.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/0f12271c-8f6c-3b4a-9805-4e9544c8a791.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/1178851a-8246-318e-85f8-1ae4517330a2.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/1178851a-8246-318e-85f8-1ae4517330a2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/2210beb6-4dc2-38a8-8f45-f0cb49bb6846.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/2210beb6-4dc2-38a8-8f45-f0cb49bb6846.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/2654e3c3-150d-3857-a426-0b141796a4e0.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/2654e3c3-150d-3857-a426-0b141796a4e0.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/29aa321a-1ce7-35de-bfab-f37fa4095c7d.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/29aa321a-1ce7-35de-bfab-f37fa4095c7d.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/37815b4b-a277-3e88-89c9-687629f7c447.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/37815b4b-a277-3e88-89c9-687629f7c447.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/3c098a03-04cc-31fd-856f-be4ccab4daf7.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/3c098a03-04cc-31fd-856f-be4ccab4daf7.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/3c604947-c962-3363-b382-8bb20e72179d.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/3c604947-c962-3363-b382-8bb20e72179d.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/3f66a67c-db6c-36b7-b762-d7a40c17883b.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/3f66a67c-db6c-36b7-b762-d7a40c17883b.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/41196538-4c2b-371d-b141-0e51ad033fac.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/41196538-4c2b-371d-b141-0e51ad033fac.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/45c2c1e2-9dd4-3d62-8e53-82e2b4b32b4a.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/45c2c1e2-9dd4-3d62-8e53-82e2b4b32b4a.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/4bf8ac1c-047f-3d7f-9946-705bc571459f.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/4bf8ac1c-047f-3d7f-9946-705bc571459f.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/5d6f5056-9d82-3950-9ee4-6a4e4ed3cf33.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/5d6f5056-9d82-3950-9ee4-6a4e4ed3cf33.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/6b70ab1d-ea1f-3080-82f2-6a9952eea911.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/6b70ab1d-ea1f-3080-82f2-6a9952eea911.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/6ecd1629-dee4-373d-9457-481bd36b0826.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/6ecd1629-dee4-373d-9457-481bd36b0826.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/9a9101ac-937d-31fc-99f0-be5bc89dd1bc.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/9a9101ac-937d-31fc-99f0-be5bc89dd1bc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockCanvas.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockCanvas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockPoster.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockPoster.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/proxy/CommonProxy.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/proxy/CommonProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/guiscreen/GuiPoster.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/guiscreen/GuiPoster.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/messagehandler/MessageHandlerClientBlockInteractionByte.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/messagehandler/MessageHandlerClientBlockInteractionByte.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/905847c0-6737-32d8-85e6-3f64ecd32033.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/905847c0-6737-32d8-85e6-3f64ecd32033.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockBottleRack.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockBottleRack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModBlocks.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModBlocks.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntities.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntities.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntitySpecialRenderers.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntitySpecialRenderers.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Oregano.iws" afterPath="$PROJECT_DIR$/Oregano.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/Oregano.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/Oregano.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/PacketHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/PacketHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityCanvas.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityCanvas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererCanvas.java" afterPath="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererCanvas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/a129ebab-93ca-3ac8-86a9-47cce1be86d0.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/a129ebab-93ca-3ac8-86a9-47cce1be86d0.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/a2d3cb04-2e77-32ea-a568-7872ba7e9c5c.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/a2d3cb04-2e77-32ea-a568-7872ba7e9c5c.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/ac42e7c5-bf90-3ead-ba50-c551df161044.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/ac42e7c5-bf90-3ead-ba50-c551df161044.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/ad4a30d4-53bd-30c6-b482-5d77fb42b2d7.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/ad4a30d4-53bd-30c6-b482-5d77fb42b2d7.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/bd11acc2-8e1a-348b-89a6-a309159aa437.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/bd11acc2-8e1a-348b-89a6-a309159aa437.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/bf0c47d3-02b6-3463-8e38-457226b1407c.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/bf0c47d3-02b6-3463-8e38-457226b1407c.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/ca560dd3-ebf9-3fc9-b2e6-088534082c81.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/ca560dd3-ebf9-3fc9-b2e6-088534082c81.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/d2fd1c5d-4760-35a0-aa0f-c197e25af2ac.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/d2fd1c5d-4760-35a0-aa0f-c197e25af2ac.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/d566deca-6b21-32cb-af90-4edf09eeac2e.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/d566deca-6b21-32cb-af90-4edf09eeac2e.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/d60321ce-54ba-31e5-bac3-cbb6a732015a.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/d60321ce-54ba-31e5-bac3-cbb6a732015a.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/d75ffc85-72b0-3b94-be32-d104d89a3a6a.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/d75ffc85-72b0-3b94-be32-d104d89a3a6a.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/d96be705-d0ae-31d3-afba-31a637d80f6d.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/d96be705-d0ae-31d3-afba-31a637d80f6d.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/e2fd3051-a7ee-3ec9-ae1f-a1b6240b0501.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/e2fd3051-a7ee-3ec9-ae1f-a1b6240b0501.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/e5a660b6-9d51-36ee-858e-f73e02a3f36f.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/e5a660b6-9d51-36ee-858e-f73e02a3f36f.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/e7c5c79a-91ee-3db1-afe8-a6ff4d4f15fa.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/e7c5c79a-91ee-3db1-afe8-a6ff4d4f15fa.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oregano/assets/oregano/lang/en_US.lang" afterPath="$PROJECT_DIR$/out/production/Oregano/assets/oregano/lang/en_US.lang" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/oregano/lang/en_US.lang" afterPath="$PROJECT_DIR$/src/main/resources/assets/oregano/lang/en_US.lang" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/f79c4f00-774e-3daf-ac9c-aebcbcc29c64.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/f79c4f00-774e-3daf-ac9c-aebcbcc29c64.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/f8a1463c-07b2-3433-918f-386b8accf0f1.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/f8a1463c-07b2-3433-918f-386b8accf0f1.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/fe207da4-45aa-3a2a-bf67-72a700290388.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/fe207da4-45aa-3a2a-bf67-72a700290388.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/fe736038-102e-365b-a97e-eabc472944ec.json" afterPath="$PROJECT_DIR$/eclipse/saves/New World/stats/fe736038-102e-365b-a97e-eabc472944ec.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eclipse/usernamecache.json" afterPath="$PROJECT_DIR$/eclipse/usernamecache.json" />
     </list>
     <ignored path="Oregano.iws" />
@@ -202,8 +99,28 @@
       <file leaf-file-name="TileEntityCanvas.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1055" max-vertical-offset="1564">
+            <state vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1564">
               <caret line="97" column="4" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TileEntityRendererBottleRack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererBottleRack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdvancedModelLoader.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraftforge/client/model/AdvancedModelLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1190">
+              <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -212,31 +129,65 @@
       <file leaf-file-name="BlockBottleRack.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockBottleRack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22869955" vertical-offset="0" max-vertical-offset="446">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-              <folding />
+            <state vertical-scroll-proportion="0.821366" vertical-offset="279" max-vertical-offset="1003">
+              <caret line="52" column="135" selection-start-line="52" selection-start-column="135" selection-end-line="52" selection-end-column="135" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#796#797#0" expanded="true" />
+                <element signature="e#867#868#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TileEntityRendererCanvas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererCanvas.java">
+      <file leaf-file-name="TileEntityBottleRack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityBottleRack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="3808">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicTextureRegister.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/DynamicTextureRegister.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="1445">
-              <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModModels.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModModels.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModTileEntities.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntities.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RenderItemFrame.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/renderer/tileentity/RenderItemFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="927" max-vertical-offset="5338">
+              <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModTileEntitySpecialRenderers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntitySpecialRenderers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -249,11 +200,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/assets/oregano/lang/en_US.lang" />
-        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModBlocks.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockMcSignDouble.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererMcSignDouble.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntitySpecialRenderers.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/guihandler/GuiHandlerOregano.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/proxy/CommonProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/guiconfig.java" />
@@ -266,11 +214,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockPoster.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/PacketHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/guiscreen/GuiPoster.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockCanvas.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/DynamicTextureManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/DynamicTextureRegister.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererCanvas.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityCanvas.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModBlocks.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/oregano/lang/en_US.lang" />
+        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockCanvas.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntities.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntitySpecialRenderers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/util/FurnitureHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockPlaster.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityBottleRack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererBottleRack.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockBottleRack.java" />
       </list>
     </option>
@@ -335,50 +291,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oregano" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oregano" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oregano" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oregano" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oregano" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -404,6 +316,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com.parrot.oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.parrot.oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -457,6 +387,82 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="init" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.parrot.oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.parrot.oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.parrot.oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guiscreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.parrot.oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="client.render" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
@@ -511,15 +517,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com.parrot.oregano" />
+              <option name="myItemId" value="assets.oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oregano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets.oregano" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="block" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mc" />
+              <option name="myItemId" value="lang" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -562,6 +578,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.parrot.oregano.client.render.tileentity" />
+      <recent name="com.parrot.oregano.tileentity" />
       <recent name="com.parrot.oregano.network.messagehandler" />
     </key>
   </component>
@@ -779,7 +797,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427053706576</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed canvas rendering to reuse DynamicTextures from pool based on texture size.&#10;Poster GUI added. Poster still needs some work ;p">
+      <created>1427221031891</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1427221031891</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -809,7 +833,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32997763" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
@@ -817,15 +841,15 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24449877" sideWeight="0.49906892" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46979865" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24449877" sideWeight="0.49906892" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46979865" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24449877" sideWeight="0.5009311" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41387025" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -846,7 +870,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24449877" sideWeight="0.49906892" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -855,7 +879,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24449877" sideWeight="0.5009311" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39932886" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41387025" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -874,7 +898,9 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Added text to GuiPoster&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added text to GuiPoster&#10;" />
+    <MESSAGE value="Fixed canvas rendering to reuse DynamicTextures from pool based on texture size.&#10;Poster GUI added. Poster still needs some work ;p" />
+    <MESSAGE value="3D OBJ models. Huzzah! Also early experiments with Carpenters Block style texturing." />
+    <option name="LAST_COMMIT_MESSAGE" value="3D OBJ models. Huzzah! Also early experiments with Carpenters Block style texturing." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -888,7 +914,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="34" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -897,227 +923,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/messagehandler/MessageHandlerTileEntityBlob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2084063" vertical-offset="0" max-vertical-offset="714">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/messagehandler/MessageHandlerClientBlockInteractionByte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2084063" vertical-offset="0" max-vertical-offset="571">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/message/MessageTileEntityBlob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2084063" vertical-offset="0" max-vertical-offset="731">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockPoster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="426" max-vertical-offset="1139">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/gui/inventory/GuiEditSign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="2618">
-          <caret line="77" column="42" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/gui/ChatLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14886165" vertical-offset="0" max-vertical-offset="571">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/gui/GuiTextField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5788531" vertical-offset="408" max-vertical-offset="12070">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/gui/GuiRenameWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6896553" vertical-offset="0" max-vertical-offset="1734">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/network/messagehandler/MessageHandlerGuiOpenToClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32749563" vertical-offset="0" max-vertical-offset="571">
-          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/resources/ResourcePackListEntryDefault.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="154" max-vertical-offset="1224">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/cpw/mods/fml/client/GuiModList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="2279" max-vertical-offset="4675">
-          <caret line="184" column="65" selection-start-line="184" selection-start-column="65" selection-end-line="184" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/entity/passive/EntityBat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1565" max-vertical-offset="4420">
-          <caret line="138" column="22" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/entity/EntityList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3839" max-vertical-offset="4981">
-          <caret line="321" column="25" selection-start-line="321" selection-start-column="25" selection-end-line="321" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/GuiHandlerOregano.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/gui/FontRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="15589">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/gui/GuiScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5785" max-vertical-offset="7242">
-          <caret line="383" column="32" selection-start-line="382" selection-start-column="7" selection-end-line="383" selection-end-column="32" />
-          <folding>
-            <element signature="e#14313#14314#0" expanded="false" />
-            <element signature="e#14340#14341#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/guiscreen/GuiPoster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3084677" vertical-offset="1799" max-vertical-offset="2873">
-          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityOregano.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/util/AxisAlignedBB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326613" vertical-offset="5666" max-vertical-offset="8551">
-          <caret line="343" column="32" selection-start-line="343" selection-start-column="32" selection-end-line="343" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3031" max-vertical-offset="3978">
-          <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_60/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7685" max-vertical-offset="20281">
-          <caret line="491" column="0" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_60/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.28" vertical-offset="12253" max-vertical-offset="23987">
-          <caret line="738" column="34" selection-start-line="738" selection-start-column="34" selection-end-line="738" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_60/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33202356" vertical-offset="4234" max-vertical-offset="33609">
-          <caret line="300" column="30" selection-start-line="300" selection-start-column="30" selection-end-line="300" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.paulscode/soundsystem/20120107/419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6/soundsystem-20120107.jar!/paulscode/sound/StreamThread.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.44" vertical-offset="162" max-vertical-offset="2176">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/renderer/tileentity/RenderItemFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85685486" vertical-offset="2856" max-vertical-offset="5338">
-          <caret line="223" column="86" selection-start-line="223" selection-start-column="86" selection-end-line="223" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/renderer/EntityRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1922" max-vertical-offset="34646">
-          <caret line="180" column="35" selection-start-line="180" selection-start-column="35" selection-end-line="180" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.paulscode/codecjorbis/20101023/c73b5636faf089d9f00e8732a829577de25237ee/codecjorbis-20101023.jar!/paulscode/sound/codecs/CodecJOrbis.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-57.08" vertical-offset="5917" max-vertical-offset="8126">
-          <caret line="458" column="17" selection-start-line="458" selection-start-column="17" selection-end-line="458" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/gui/GuiRepair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2084063" vertical-offset="0" max-vertical-offset="3417">
-          <caret line="24" column="56" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_60/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.06876228" vertical-offset="3503" max-vertical-offset="7837">
-          <caret line="227" column="6" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/renderer/texture/ITextureObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
@@ -1171,7 +976,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="43457" max-vertical-offset="46750">
           <caret line="2834" column="0" selection-start-line="2834" selection-start-column="0" selection-end-line="2834" selection-end-column="0" />
           <folding>
-            <element signature="e#112982#112983#0" expanded="true" />
+            <element signature="e#112982#112983#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1231,7 +1036,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="834" max-vertical-offset="1343">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
-            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1265,8 +1070,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2908" max-vertical-offset="7191">
           <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
           <folding>
-            <element signature="e#1324#1325#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1324#1325#0" expanded="false" />
+            <element signature="e#1367#1368#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1279,21 +1084,218 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/oregano/lang/en_US.lang">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22869955" vertical-offset="0" max-vertical-offset="446">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityOregano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityPoster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37668163" vertical-offset="818" max-vertical-offset="1955">
+          <caret line="72" column="67" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33256352" vertical-offset="587" max-vertical-offset="3808">
+          <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/DynamicTextureRegister.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="1445">
-          <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="753" max-vertical-offset="1445">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererCanvas.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraftforge/client/model/obj/Face.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="3808">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.36935166" vertical-offset="494" max-vertical-offset="1462">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#463#464#0" expanded="false" />
+            <element signature="e#517#518#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraftforge/client/model/obj/GroupObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6660118" vertical-offset="324" max-vertical-offset="833">
+          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraftforge/client/model/obj/WavefrontObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46975806" vertical-offset="2793" max-vertical-offset="10948">
+          <caret line="196" column="29" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraftforge/client/model/obj/ObjModelLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56777996" vertical-offset="0" max-vertical-offset="509">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/oregano/models/Suzanne.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-38.856583" vertical-offset="19829" max-vertical-offset="25670">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.206897" vertical-offset="0" max-vertical-offset="442">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModBlocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="595">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/GuiHandlerOregano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/gui/guiscreen/GuiPoster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.576613" vertical-offset="1071" max-vertical-offset="2873">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/handler/ConfigurationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntitySpecialRenderers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraft/client/renderer/tileentity/RenderItemFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="927" max-vertical-offset="5338">
+          <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/util/FurnitureHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModModels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockOregano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="629">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockPlaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4455645" vertical-offset="0" max-vertical-offset="496">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/init/ModTileEntities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/tileentity/TileEntityBottleRack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1305,11 +1307,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2944573" vertical-offset="2669" max-vertical-offset="3978">
+          <caret line="202" column="5" selection-start-line="202" selection-start-column="5" selection-end-line="202" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraftforge/client/model/AdvancedModelLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1190">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraftforge/client/model/IModelCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35726795" vertical-offset="0" max-vertical-offset="571">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1291/forgeSrc-1.7.10-10.13.2.1291-sources.jar!/net/minecraftforge/client/model/obj/TextureCoordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11908932" vertical-offset="0" max-vertical-offset="571">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/client/render/tileentity/TileEntityRendererBottleRack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/parrot/oregano/block/BlockBottleRack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22869955" vertical-offset="0" max-vertical-offset="446">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
+        <state vertical-scroll-proportion="0.821366" vertical-offset="279" max-vertical-offset="1003">
+          <caret line="52" column="135" selection-start-line="52" selection-start-column="135" selection-end-line="52" selection-end-column="135" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
