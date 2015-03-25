@@ -33,7 +33,7 @@ public class BlockCanvas extends BlockOregano implements ITileEntityProvider{
         super();
         setBlockName("canvas");
         setBlockTextureName("sand");
-        setBlockBounds(0.20F,0.0F,0.0F,thickness,2.0F,1.0F);
+        setBlockBounds(0.20F,0.0F,0.0F,thickness,2.0F,2.0F);
     }
 
     @Override
@@ -111,12 +111,17 @@ public class BlockCanvas extends BlockOregano implements ITileEntityProvider{
         Vec3 pos=xyz;
         //lookVec.dotProduct()
 
-        float depth=-0.50F+BlockCanvas.thickness;
+        float depth=+0.2F+BlockCanvas.thickness;
         //+0.05//+0.05//-0.05
         float angleconst=tileEntity.tilt;
-        Vec3 planeP1=Vec3.createVectorHelper(-0.5F, 0.0F, depth+angleconst );
-        Vec3 planeP2=Vec3.createVectorHelper(0.5F, 0.0F, depth+angleconst );
-        Vec3 planeP3=Vec3.createVectorHelper(-0.5F, 1.0F, depth-angleconst );
+        float wid=0.6F;
+        float wd=wid/2.0F;
+        float height=0.6F;
+        Vec3 planeP1=Vec3.createVectorHelper(-wd, 0.0F, depth+angleconst );
+        Vec3 planeP2=Vec3.createVectorHelper(wd, 0.0F, depth+angleconst );
+        Vec3 planeP3=Vec3.createVectorHelper(-wd, height, depth-angleconst );
+
+
 
         Vec3 xyzoffset=Vec3.createVectorHelper(0.5F,0.0F,0.5F);
         planeP1=planeP1.addVector(x,y,z).addVector(xyzoffset.xCoord,xyzoffset.yCoord,xyzoffset.zCoord);
@@ -139,7 +144,7 @@ public class BlockCanvas extends BlockOregano implements ITileEntityProvider{
         //Vec3 planeN =(planeP3.subtract(planeP1).crossProduct(planeP2.subtract(planeP1))   );//inverted
 
         Vec3 normalArrow=centreofPlane.addVector(planeN.xCoord*0.5F,planeN.yCoord*0.5F,planeN.zCoord*0.5F);
-        tileEntity.debugVecMap.put("pN",xyz.subtract(normalArrow));
+        tileEntity.debugVecMap.put("pN", xyz.subtract(normalArrow));
         tileEntity.debugVecMap.put("pN_dot1",xyz.subtract(normalArrow.addVector(planeN.xCoord*-0.25F,planeN.yCoord*-0.25F,planeN.zCoord*-0.25F)));
         tileEntity.debugVecMap.put("pN_dot2",xyz.subtract(normalArrow.addVector(planeN.xCoord*0.25F,planeN.yCoord*0.25F,planeN.zCoord*0.25F)));
 
@@ -185,20 +190,22 @@ public class BlockCanvas extends BlockOregano implements ITileEntityProvider{
                     lineP1.yCoord + (u2 * lookVec.normalize().yCoord),
                     lineP1.zCoord + (u2 * lookVec.normalize().zCoord)
             );
-            tileEntity.debugVecMap.put("x",xyz.subtract(poi));
+        //tileEntity.debugVecMap.put("x",xyz.subtract(poi));
 
-            poiLocal=Vec3.createVectorHelper(poi.xCoord-planeP1.xCoord,poi.yCoord-planeP1.yCoord,poi.zCoord-planeP1.zCoord);
-            poiNormalized=Vec3.createVectorHelper(poiLocal.xCoord/planeSize.xCoord,poiLocal.yCoord/planeSize.yCoord,poiLocal.zCoord/planeSize.zCoord);
+        poiLocal=Vec3.createVectorHelper(poi.xCoord-planeP1.xCoord,poi.yCoord-planeP1.yCoord,poi.zCoord-planeP1.zCoord);
+        poiNormalized=Vec3.createVectorHelper(poiLocal.xCoord/planeSize.xCoord,poiLocal.yCoord/planeSize.yCoord,poiLocal.zCoord/planeSize.zCoord);
 
-        }
-        //LogHelper.info("intersectionA=" +poi);
-        //LogHelper.info("intersectionB=" + );
-        poi=intersectLinePlane(lineP1, lookVec, 2.0F, planeP1, planeP3, planeP2);
+    }
+    //LogHelper.info("intersectionA=" +poi);
+    //LogHelper.info("intersectionB=" + );
+    poi=intersectLinePlane(lineP1, lookVec, 2.0F, planeP1, planeP3, planeP2);
+
+        if(poi!=null){tileEntity.debugVecMap.put("x",xyz.subtract(poi));}
 
         AxisAlignedBB aabb=AxisAlignedBB.getBoundingBox(x,y,z,x+0.5F,y+0.5F,z+0.5F);
         LogHelper.info("AABBINTERCEPT:"+aabb.calculateIntercept(lineP1,lineP2));
 
-        tileEntity.tilt+=0.001F;
+        //tileEntity.tilt+=0.001F;
 
         //Vec3 poi = lineP1.addVector(lineP1P2.xCoord * u, lineP1P2.yCoord * u, lineP1P2.zCoord * u);
         //Vec3 poi2=poi.subtract(pos);

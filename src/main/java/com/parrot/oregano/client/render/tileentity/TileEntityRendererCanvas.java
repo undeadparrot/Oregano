@@ -1,7 +1,9 @@
 package com.parrot.oregano.client.render.tileentity;
 
+import com.parrot.oregano.Oregano;
 import com.parrot.oregano.block.BlockCanvas;
 import com.parrot.oregano.client.render.DynamicTextureRegister;
+import com.parrot.oregano.init.ModModels;
 import com.parrot.oregano.tileentity.TileEntityCanvas;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.gui.FontRenderer;
@@ -13,6 +15,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
+import net.minecraftforge.client.model.AdvancedModelLoader;
+import net.minecraftforge.client.model.IModelCustom;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.image.BufferedImage;
@@ -56,15 +60,30 @@ public class TileEntityRendererCanvas extends TileEntitySpecialRenderer {
             //dynamicTextureLocation=texManager.getDynamicTextureLocation("canwors",dynamicTexture);
         //texManager.new DynamicTexture(64,64);
 
-            texManager.bindTexture(
-                    DynamicTextureRegister.getInstance().getResourceLocation("canwors" ,tileEntity.width,tileEntity.height));
+            GL11.glTranslatef((float) x , (float) y-1F , (float) z);
 
-            GL11.glTranslatef((float) x , (float) y , (float) z);
-            GL11.glTranslatef( 0.5F , 0.0F , 0.5F);
+            GL11.glPushMatrix();
+
+                IModelCustom model= ModModels.easel;
+                bindTexture(new ResourceLocation("minecraft", "textures/blocks/planks_spruce.png"));
+                model.renderPart("Easel");
+                bindTexture(new ResourceLocation("minecraft", "textures/blocks/wool_colored_white.png"));
+                //model.renderPart("CanvasBlock");
+
+            GL11.glPopMatrix();
+
+            GL11.glTranslatef(0.5F, 1.0F, 1.5F);
+            //GL11.glRotatef()
 
             GL11.glPushMatrix();
 //
-                if(tileEntity.data[01]>tileEntity.data[02])
+
+
+        texManager.bindTexture(
+                DynamicTextureRegister.getInstance().getResourceLocation("canwors" ,tileEntity.width,tileEntity.height));
+
+
+        if(tileEntity.data[01]>tileEntity.data[02])
                 {
                     //GL11.glRotatef(90F, 0.0F, 1.0F, 0.0F);
                 }
@@ -76,26 +95,21 @@ public class TileEntityRendererCanvas extends TileEntitySpecialRenderer {
                 int lightValue = entity.getWorldObj().getBlock((int)x,(int)y,(int)z).getMixedBrightnessForBlock(entity.getWorldObj(), (int)x, (int)y, (int)z);
                 tessellator.setBrightness(lightValue);
 
-                float depth=-0.50F+BlockCanvas.thickness;
-                float depth2=0.02F+depth;
+                float depth=-0.8F+BlockCanvas.thickness;
 
                 float tilt=tileEntity.tilt;
-
+                float w=0.6F;
+                float wd=w/2.0F;
+                float h=0.6F;
                 tessellator.startDrawingQuads();
-                tessellator.addVertexWithUV(-0.5F,   0.0F,   depth+tilt,    0.0F, 1.0F);
-                tessellator.addVertexWithUV(0.5F,   0.0F,   depth+tilt,    1.0F, 1.0F);
-                tessellator.addVertexWithUV(0.5F,   1.0F,   depth-tilt,    1.0F, 0.0F);
-                tessellator.addVertexWithUV(-0.5F,   1.0F,   depth-tilt, 0.0F, 0.0F);
+                tessellator.addVertexWithUV(-wd,   0.0F,   depth+tilt,    0.0F, 1.0F);
+                tessellator.addVertexWithUV(wd,   0.0F,   depth+tilt,    1.0F, 1.0F);
+                tessellator.addVertexWithUV(wd,   h,   depth-tilt,    1.0F, 0.0F);
+                tessellator.addVertexWithUV(-wd,   h,   depth-tilt, 0.0F, 0.0F);
                 tessellator.draw();
 
 
                 //Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation("textures/blocks/planks.png"));
-                tessellator.startDrawingQuads();
-                tessellator.addVertexWithUV(-0.55F,   0.0F,   depth2,    0.0F, 1.0F);
-                tessellator.addVertexWithUV(-0.5F,   0.0F,   depth2,    1.0F, 1.0F);
-                tessellator.addVertexWithUV(-0.5F,   1.0F,   depth2,    1.0F, 0.0F);
-                tessellator.addVertexWithUV(-0.55F,   1.0F,   depth2, 0.0F, 0.0F);
-                tessellator.draw();
 
                 //tessellateCenteredCubeWithUV(tessellator,1.0F,1.0F, BlockCanvas.thickness,0.0F,0.0F,1.0F);
 

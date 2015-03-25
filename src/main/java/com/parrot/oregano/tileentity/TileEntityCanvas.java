@@ -22,12 +22,12 @@ import java.util.Map;
  */
 public class TileEntityCanvas extends TileEntityOregano {
 
-    public int width = 32;
-    public int height= 32;
+    public int width = 16;
+    public int height= 16;
     public int[] data;
 
     public Vec3 testPosition;
-    public float tilt=0.0F;
+    public float tilt=0.050F;
     public Map<String,Vec3> debugVecMap=new HashMap<String,Vec3>();
 
     public int syncTicks;

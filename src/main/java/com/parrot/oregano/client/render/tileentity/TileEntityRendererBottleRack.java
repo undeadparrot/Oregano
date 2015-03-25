@@ -36,12 +36,25 @@ public class TileEntityRendererBottleRack extends TileEntitySpecialRenderer {
         //GL11.glDisable(GL11.GL_TEXTURE_2D);
 
         //net.minecraftforge.client.model.obj.TextureCoordinate// TODO: Try to make a new extension of the WavefrontModel loader renderer thingy that can translate UVs according to a parameter. this will allow me to do things like Carpenters material borrowing.
-        IModelCustom model=AdvancedModelLoader.loadModel(new ResourceLocation(Oregano.MODID.toLowerCase(),"models/Suzanne.obj"));
-        //model.renderAll();
-        bindTexture(new ResourceLocation(((TileEntityBottleRack)entity).texture));
-        model.renderPart("Cube");
-        bindTexture(new ResourceLocation("minecraft", "textures/blocks/glass_pink.png"));
-        model.renderPart("Suzanne");
+
+//        IModelCustom model=AdvancedModelLoader.loadModel(new ResourceLocation(Oregano.MODID.toLowerCase(),"models/ChestBarrelMini.obj"));
+//        bindTexture(new ResourceLocation("minecraft", "textures/blocks/planks_spruce.png"));
+//        model.renderPart("Box");
+//        model.renderPart("Lid");
+//        bindTexture(new ResourceLocation("minecraft", "textures/blocks/iron_block.png"));
+//        model.renderPart("Clasp");
+//        bindTexture(new ResourceLocation("minecraft", "textures/blocks/wool_colored_purple.png"));
+//        model.renderPart("Lining");
+
+        IModelCustom model=AdvancedModelLoader.loadModel(new ResourceLocation(Oregano.MODID.toLowerCase(),"models/Easel.obj"));
+        bindTexture(new ResourceLocation("minecraft", "textures/blocks/planks_spruce.png"));
+        model.renderPart("Easel");
+        bindTexture(new ResourceLocation("minecraft", "textures/blocks/wool_colored_white.png"));
+        model.renderPart("CanvasBlock");
+//        bindTexture(new ResourceLocation(((TileEntityBottleRack)entity).texture));
+//        model.renderPart("Cube");
+//        bindTexture(new ResourceLocation("minecraft", "textures/blocks/glass_pink.png"));
+//        model.renderPart("Suzanne");
 
         //GL11.glEnable(GL11.GL_TEXTURE_2D);
 
