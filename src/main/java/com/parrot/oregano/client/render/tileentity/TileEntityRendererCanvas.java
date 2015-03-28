@@ -10,6 +10,7 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.client.renderer.texture.TextureManager;
+import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
@@ -36,14 +37,17 @@ public class TileEntityRendererCanvas extends TileEntitySpecialRenderer {
 
         TileEntityCanvas tileEntity=(TileEntityCanvas)entity;
 
-        TextureManager texManager= FMLClientHandler.instance().getClient().getTextureManager();
+//TextureManager texManager= FMLClientHandler.instance().getClient().getTextureManager();
 
 
         GL11.glPushMatrix();
 
 
 
-        DynamicTextureRegister.getInstance().updateDynamicTexture("canwors" ,tileEntity.width, tileEntity.height,tileEntity.data);
+
+
+
+//
 
 
 //            DynamicTexture dynamicTexture = new DynamicTexture(4, 4);
@@ -78,9 +82,11 @@ public class TileEntityRendererCanvas extends TileEntitySpecialRenderer {
             GL11.glPushMatrix();
 //
 
+        DynamicTexture dynamicTexture=new DynamicTexture(tileEntity.width, tileEntity.height);//bufferedImage);;
+        TextureUtil.uploadTexture(dynamicTexture.getGlTextureId(),tileEntity.data,tileEntity.width, tileEntity.height);
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D,dynamicTexture.getGlTextureId());
 
-        texManager.bindTexture(
-                DynamicTextureRegister.getInstance().getResourceLocation("canwors" ,tileEntity.width,tileEntity.height));
+//texManager.bindTexture(DynamicTextureRegister.getInstance().getResourceLocation("canwors" ,tileEntity.width,tileEntity.height));
 
 
         if(tileEntity.data[01]>tileEntity.data[02])
@@ -108,14 +114,17 @@ public class TileEntityRendererCanvas extends TileEntitySpecialRenderer {
                 tessellator.addVertexWithUV(-wd,   h,   depth-tilt, 0.0F, 0.0F);
                 tessellator.draw();
 
+        dynamicTexture.deleteGlTexture();
 
-                //Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation("textures/blocks/planks.png"));
+
+
+        //Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation("textures/blocks/planks.png"));
 
                 //tessellateCenteredCubeWithUV(tessellator,1.0F,1.0F, BlockCanvas.thickness,0.0F,0.0F,1.0F);
 
             GL11.glPopMatrix();
 
-            texManager.bindTexture(new ResourceLocation("textures/gui/container/anvil.png"));
+//            texManager.bindTexture(new ResourceLocation("textures/gui/container/anvil.png"));
 
         GL11.glPopMatrix();
 

@@ -18,7 +18,10 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
+import org.lwjgl.BufferChecks;
+import org.lwjgl.opengl.ContextCapabilities;
 import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GLContext;
 
 /**
  * Created by Shane on 3/14/2015.
@@ -35,9 +38,12 @@ public class TileEntityRendererBlob extends TileEntitySpecialRenderer {
 
         IModelCustom model = ModModels.chestBarrelMini;
         bindTexture(new ResourceLocation("minecraft", "textures/blocks/planks_spruce.png"));
+
         model.renderPart("Box");
         model.renderPart("Lid");
         bindTexture(new ResourceLocation("minecraft", "textures/blocks/iron_block.png"));
+        //GL11.glBindTexture(GL11.GL_TEXTURE_2D,37);
+
         model.renderPart("Clasp");
         bindTexture(new ResourceLocation("minecraft", "textures/blocks/wool_colored_purple.png"));
         model.renderPart("Lining");

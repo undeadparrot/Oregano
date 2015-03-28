@@ -22,8 +22,8 @@ import java.util.Map;
  */
 public class TileEntityCanvas extends TileEntityOregano {
 
-    public int width = 16;
-    public int height= 16;
+    public int width = 32;
+    public int height= 32;
     public int[] data;
 
     public Vec3 testPosition;
