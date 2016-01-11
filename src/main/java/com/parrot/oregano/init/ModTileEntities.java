@@ -16,6 +16,7 @@ public class ModTileEntities {
         GameRegistry.registerTileEntity(TileEntityCanvas.class,"canvas");
         GameRegistry.registerTileEntity(TileEntityPoster.class,"poster");
         GameRegistry.registerTileEntity(TileEntityBottleRack.class,"bottlerack");
+        GameRegistry.registerTileEntity(TileEntityContainerRotatable.class,"containerrotatable");
 
     }
 }

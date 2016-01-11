@@ -1,6 +1,6 @@
 package com.parrot.oregano.block;
 
-import com.parrot.oregano.init.ModTileEntitySpecialRenderers;
+import com.parrot.oregano.init.ModRenderers;
 import com.parrot.oregano.tileentity.TileEntityBottleRack;
 import com.parrot.oregano.util.LogHelper;
 import net.minecraft.block.ITileEntityProvider;
@@ -30,7 +30,7 @@ public class BlockBottleRack extends BlockOregano implements ITileEntityProvider
     @Override
     public int getRenderType()
     {
-        return ModTileEntitySpecialRenderers.renderidBottleRack;
+        return 1;
     }
 
     @Override

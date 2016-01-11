@@ -75,8 +75,11 @@ public class ItemPaintbrush extends ItemOregano {
         return false;//continue processing use
     }
     @Override
-    public boolean onItemUse(ItemStack p_77648_1_, EntityPlayer player, World world, int x, int y, int z, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_)
+    public boolean onItemUse(ItemStack p_77648_1_, EntityPlayer player, World world, int x, int y, int z, int p_77648_7_, float sideX, float sideY, float sideZ)
     {
+        ForgeDirection fd = BlockHelper.GetFDFromEntity(player,false);
+        LogHelper.info("pbrush>FD "+fd+"__IDinv "+BlockHelper.GetFDFromEntity(player,true));
+        LogHelper.info("pbrush>p_?_7 "+p_77648_7_+" side(x:y:z)="+sideX+"_"+sideY+"_"+sideZ);
         LogHelper.info("pbrush>onItemUse "+x+"_"+y+"_"+z+" "+p_77648_7_);
         TileEntity tileEntityGeneric = world.getTileEntity(x,y,z);
         if(tileEntityGeneric!=null && tileEntityGeneric instanceof TileEntityCanvas)

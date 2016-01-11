@@ -1,25 +1,30 @@
 package com.parrot.oregano.block;
 
-import com.parrot.oregano.init.ModTileEntities;
-import com.parrot.oregano.init.ModTileEntitySpecialRenderers;
+import com.parrot.oregano.Oregano;
+import com.parrot.oregano.network.PacketHandler;
+import com.parrot.oregano.network.message.MessagePlaySoundToClient;
 import com.parrot.oregano.tileentity.TileEntityBlob;
-import cpw.mods.fml.server.FMLServerHandler;
+import com.parrot.oregano.util.LogHelper;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.BlockBush;
+import net.minecraft.block.IGrowable;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 /**
  * Created by Shane on 3/14/2015.
  */
-public class BlockBlob extends BlockOregano implements ITileEntityProvider{
+public class BlockBlob extends BlockBush implements ITileEntityProvider, IGrowable {
 
     public BlockBlob()
     {
@@ -29,9 +34,24 @@ public class BlockBlob extends BlockOregano implements ITileEntityProvider{
     }
 
     @Override
+    public String getUnlocalizedName()
+    {
+        return String.format("tile.%s:%s", Oregano.MODID.toLowerCase(),super.getUnlocalizedName().substring(super.getUnlocalizedName().indexOf('.') + 1) );
+    }
+
+
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister iconRegister)
+    {
+        blockIcon= iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf('.')+1));
+    }
+
+    @Override
     public int getRenderType()
     {
-        return ModTileEntitySpecialRenderers.renderidBlob;
+        return -1;
     }
 
     @Override
@@ -98,8 +118,50 @@ public class BlockBlob extends BlockOregano implements ITileEntityProvider{
 
 
         }
+
         return true;
     }
 
+    @Override
+    public void updateTick(World world,int x, int y,int z,Random rand)
+    {
+        func_149853_b(world,rand,x,y,z);
+    }
 
+    @Override
+    public boolean func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, boolean p_149851_5_) {
+        //IS STILL GROWING method. returns true if plant is not yet fully grown.
+        return true;
+    }
+
+    @Override
+    public boolean func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_) {
+        //CAN BE BONED method. returns true if can be sped up by using bonemeal.
+        return true;
+    }
+
+    @Override
+    public void func_149853_b(World world, Random random, int x, int y, int z) {
+        //GROW BABY GROW method. increment growth stage.
+
+        String s1 = "fireworks." + "blast" + "_far";
+        world.playSound(x, y, z, s1, 20.0F, 15.95F  , true);
+        PacketHandler.INSTANCE.sendToAll(new MessagePlaySoundToClient(s1,x,y,z));
+
+//        TileEntityBlob tileEntity = (TileEntityBlob) world.getTileEntity(x,y,z);
+//
+//        if(   tileEntity.inventoryItem==null   )
+//        {
+//            ItemStack itemStack = new ItemStack(Items.golden_carrot);
+//            tileEntity.inventoryItem=itemStack;
+            LogHelper.info("Setting stack.");
+//        }
+//
+//        if(!world.isRemote) {
+//            world.setBlock(x, y + 1, z, ModBlocks.blob);
+//            world.markBlockForUpdate(x, y+1,z );
+//            LogHelper.info("Setting block:"+random.nextInt());
+//        }
+
+    }
 }

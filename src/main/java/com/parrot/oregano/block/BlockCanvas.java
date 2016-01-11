@@ -1,25 +1,14 @@
 package com.parrot.oregano.block;
 
-import com.parrot.oregano.init.ModTileEntitySpecialRenderers;
 import com.parrot.oregano.tileentity.TileEntityCanvas;
-import com.parrot.oregano.util.BlockHelper;
-import com.parrot.oregano.util.LogHelper;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
-import java.awt.*;
-import java.util.*;
-
-import static com.parrot.oregano.util.IntersectionHelper.intersectLinePlane;
 
 /**
  * Created by Shane on 3/14/2015.
@@ -39,7 +28,7 @@ public class BlockCanvas extends BlockOregano implements ITileEntityProvider{
     @Override
     public int getRenderType()
     {
-        return ModTileEntitySpecialRenderers.renderidCanvas;
+        return -1;
     }
 
     @Override
@@ -51,7 +40,7 @@ public class BlockCanvas extends BlockOregano implements ITileEntityProvider{
     @Override
     public boolean renderAsNormalBlock()
     {
-        return false;
+        return true;
     }
 
 

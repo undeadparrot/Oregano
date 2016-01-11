@@ -4,7 +4,6 @@ import com.parrot.oregano.Oregano;
 import com.parrot.oregano.init.ModItems;
 import com.parrot.oregano.init.ModModels;
 import com.parrot.oregano.tileentity.TileEntityBlob;
-import com.sun.prism.util.tess.Tess;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.Tessellator;

@@ -1,6 +1,6 @@
 package com.parrot.oregano.block.mc;
 
-import com.parrot.oregano.init.ModTileEntitySpecialRenderers;
+import com.parrot.oregano.init.ModRenderers;
 import net.minecraft.block.BlockSign;
 import net.minecraft.tileentity.TileEntitySign;
 
@@ -14,8 +14,8 @@ public class BlockMcSignDouble extends BlockSign{
         this.setBlockName("mcsigndouble");
     }
 
-    @Override
-    public int getRenderType(){return ModTileEntitySpecialRenderers.renderidMcSignDouble;}
+    //@Override
+    //public int getRenderType(){return ModRenderers.renderidMcSignDouble;}
 
 
 }

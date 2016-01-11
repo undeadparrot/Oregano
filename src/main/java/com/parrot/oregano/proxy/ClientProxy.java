@@ -1,8 +1,7 @@
 package com.parrot.oregano.proxy;
 
 import com.parrot.oregano.handler.DrawBlockHighlightEventHandler;
-import com.parrot.oregano.init.ModTileEntitySpecialRenderers;
-import net.minecraftforge.client.event.DrawBlockHighlightEvent;
+import com.parrot.oregano.init.ModRenderers;
 import net.minecraftforge.common.MinecraftForge;
 
 /**
@@ -14,7 +13,7 @@ public class ClientProxy extends CommonProxy {
     public void init()
     {
         super.init();
-        ModTileEntitySpecialRenderers.init();
+        ModRenderers.init();
         MinecraftForge.EVENT_BUS.register(new DrawBlockHighlightEventHandler());
 
     }

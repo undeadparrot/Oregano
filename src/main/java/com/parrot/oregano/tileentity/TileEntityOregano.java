@@ -1,23 +1,22 @@
 package com.parrot.oregano.tileentity;
 
-import com.parrot.oregano.util.LogHelper;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
+import com.parrot.oregano.client.render.special.TileEntityRendererRotatable;
 import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.event.DrawBlockHighlightEvent;
+import net.minecraftforge.common.util.ForgeDirection;
 import org.lwjgl.opengl.GL11;
 
 /**
  * Created by Shane on 3/14/2015.
  */
-public class TileEntityOregano extends TileEntity {
+public abstract class TileEntityOregano extends TileEntity {
 
 
+    public ForgeDirection facing=ForgeDirection.NORTH;
+    public int sidePlaced=1;
 
     @Override
     public void readFromNBT(NBTTagCompound nbt)
@@ -56,6 +55,8 @@ public class TileEntityOregano extends TileEntity {
             event.context.drawOutlinedBoundingBox(aabb, -1);
         }
 
+
+
         GL11.glDepthMask(true);
         GL11.glEnable(GL11.GL_TEXTURE_2D);
         GL11.glDisable(GL11.GL_BLEND);
@@ -70,4 +71,10 @@ public class TileEntityOregano extends TileEntity {
     public void onClientBlockInteractionByte(byte action) {
 
     }
+
+    public  void renderCentered(TileEntityRendererRotatable tesr,TileEntity entity)
+    {
+        //;
+    }
+
 }
