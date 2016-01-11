@@ -16,7 +16,6 @@ public abstract class TileEntityOregano extends TileEntity {
 
 
     public ForgeDirection facing=ForgeDirection.NORTH;
-    public int sidePlaced=1;
 
     @Override
     public void readFromNBT(NBTTagCompound nbt)
