@@ -24,7 +24,7 @@ import java.util.Random;
 /**
  * Created by Shane on 3/14/2015.
  */
-public class BlockBlob extends BlockBush implements ITileEntityProvider, IGrowable {
+public class BlockBlob extends BlockContainerRotatable implements ITileEntityProvider  {
 
     public BlockBlob()
     {
@@ -118,50 +118,49 @@ public class BlockBlob extends BlockBush implements ITileEntityProvider, IGrowab
 
 
         }
-
         return true;
     }
-
-    @Override
-    public void updateTick(World world,int x, int y,int z,Random rand)
-    {
-        func_149853_b(world,rand,x,y,z);
-    }
-
-    @Override
-    public boolean func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, boolean p_149851_5_) {
-        //IS STILL GROWING method. returns true if plant is not yet fully grown.
-        return true;
-    }
-
-    @Override
-    public boolean func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_) {
-        //CAN BE BONED method. returns true if can be sped up by using bonemeal.
-        return true;
-    }
-
-    @Override
-    public void func_149853_b(World world, Random random, int x, int y, int z) {
-        //GROW BABY GROW method. increment growth stage.
-
-        String s1 = "fireworks." + "blast" + "_far";
-        world.playSound(x, y, z, s1, 20.0F, 15.95F  , true);
-        PacketHandler.INSTANCE.sendToAll(new MessagePlaySoundToClient(s1,x,y,z));
-
-//        TileEntityBlob tileEntity = (TileEntityBlob) world.getTileEntity(x,y,z);
 //
-//        if(   tileEntity.inventoryItem==null   )
-//        {
-//            ItemStack itemStack = new ItemStack(Items.golden_carrot);
-//            tileEntity.inventoryItem=itemStack;
-            LogHelper.info("Setting stack.");
-//        }
-//
-//        if(!world.isRemote) {
-//            world.setBlock(x, y + 1, z, ModBlocks.blob);
-//            world.markBlockForUpdate(x, y+1,z );
-//            LogHelper.info("Setting block:"+random.nextInt());
-//        }
+//    @Override
+//    public void updateTick(World world,int x, int y,int z,Random rand)
+//    {
+//        func_149853_b(world,rand,x,y,z);
+//    }
 
-    }
+//    @Override
+//    public boolean func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, boolean p_149851_5_) {
+//        //IS STILL GROWING method. returns true if plant is not yet fully grown.
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_) {
+//        //CAN BE BONED method. returns true if can be sped up by using bonemeal.
+//        return true;
+//    }
+//
+//    @Override
+//    public void func_149853_b(World world, Random random, int x, int y, int z) {
+//        //GROW BABY GROW method. increment growth stage.
+//
+//        String s1 = "fireworks." + "blast" + "_far";
+//        world.playSound(x, y, z, s1, 20.0F, 15.95F  , true);
+//        PacketHandler.INSTANCE.sendToAll(new MessagePlaySoundToClient(s1,x,y,z));
+//
+////        TileEntityBlob tileEntity = (TileEntityBlob) world.getTileEntity(x,y,z);
+////
+////        if(   tileEntity.inventoryItem==null   )
+////        {
+////            ItemStack itemStack = new ItemStack(Items.golden_carrot);
+////            tileEntity.inventoryItem=itemStack;
+//            LogHelper.info("Setting stack.");
+////        }
+////
+////        if(!world.isRemote) {
+////            world.setBlock(x, y + 1, z, ModBlocks.blob);
+////            world.markBlockForUpdate(x, y+1,z );
+////            LogHelper.info("Setting block:"+random.nextInt());
+////        }
+//
+//    }
 }

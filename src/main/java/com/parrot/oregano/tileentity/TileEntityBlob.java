@@ -1,21 +1,35 @@
 package com.parrot.oregano.tileentity;
 
+import com.parrot.oregano.client.render.special.TileEntityRendererRotatable;
+import com.parrot.oregano.init.ModModels;
 import com.parrot.oregano.network.PacketHandler;
 import com.parrot.oregano.network.message.MessageTileEntityBlob;
 import com.parrot.oregano.network.message.MessageTileEntityCanvas;
 import com.parrot.oregano.util.LogHelper;
 import io.netty.buffer.ByteBufUtil;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemEditableBook;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagEnd;
 import net.minecraft.nbt.NBTUtil;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+import net.minecraftforge.client.model.IModelCustom;
+import org.lwjgl.opengl.GL11;
 
 /**
  * Created by Shane on 3/14/2015.
  */
-public class TileEntityBlob extends TileEntityOregano implements IInventory{
+public class TileEntityBlob extends TileEntityContainerRotatable {
 
     public int syncTicks;
     public boolean dirty=true;
@@ -141,4 +155,102 @@ public class TileEntityBlob extends TileEntityOregano implements IInventory{
     public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
         return true;
     }
+
+    @Override
+    public void renderCentered(TileEntityRendererRotatable tesr, TileEntity entity) {
+
+        GL11.glPushMatrix();
+
+        FontRenderer fontrenderer = tesr.func_147498_b();
+
+
+        GL11.glPushMatrix();
+        GL11.glTranslatef((float) x  , (float) y  , (float) z  );
+
+        IModelCustom model = ModModels.chestBarrelMini;
+        tesr.bindTexturePublic(new ResourceLocation("minecraft", "textures/blocks/planks_spruce.png"));
+
+        model.renderPart("Box");
+        model.renderPart("Lid");
+        tesr.bindTexturePublic(new ResourceLocation("minecraft", "textures/blocks/iron_block.png"));
+        //GL11.glBindTexture(GL11.GL_TEXTURE_2D,37);
+
+        model.renderPart("Clasp");
+        tesr.bindTexturePublic(new ResourceLocation("minecraft", "textures/blocks/wool_colored_purple.png"));
+        model.renderPart("Lining");
+
+        GL11.glPopMatrix();
+
+
+
+        GL11.glTranslatef((float) x + 0.0F, (float) y + 0.50F, (float) z + 0.0F);
+        GL11.glTranslatef(-0.1F,-0.25F,-0.05F);
+        GL11.glScalef(0.5F,0.5F,0.5F);
+        World world = entity.getWorldObj();
+        TileEntityBlob tileEntity=((TileEntityBlob)entity);
+
+        ItemStack stack = tileEntity.inventoryItem;
+        if(stack!=null) {
+
+            EntityItem entItem = new EntityItem(Minecraft.getMinecraft().theWorld, 0D, 0D, 0D, stack);
+            entItem.hoverStart = 0.0F;
+
+            GL11.glPushMatrix();
+            GL11.glRotatef(-120.50F, 0.15F, 0.15F, 0.25F);
+            RenderItem.renderInFrame = true;
+            RenderManager.instance.renderEntityWithPosYaw(entItem, 0.0D, 0.0D, 0.0D, 0.0F, 0.0F);
+            RenderItem.renderInFrame = false;
+            GL11.glPopMatrix();
+
+
+
+        }
+
+        GL11.glPushMatrix();
+        //GL11.glTranslatef((float) x + 0.5F, (float) y + 0.50F, (float) z + 0.5F);
+        //GL11.glTranslatef((float) x, (float) y, (float) z);
+        //String iconname=Block.getBlockFromName("Stone").getBlockTextureFromSide(3).getIconName();
+        tesr.bindTexturePublic(new ResourceLocation("textures/entity/chest/trapped.png"));
+        Tessellator tessellator = Tessellator.instance;
+        //int lightValue = entity.getWorldObj().getBlock((int)x,(int)y,(int)z).getMixedBrightnessForBlock(entity.getWorldObj(), (int)x, (int)y, (int)z);
+        //tessellator.setBrightness(lightValue);
+        //tessellateCenteredCubeWithUV(tessellator, 00.50F, 0.50F, 00.50F, 0.45F, 0.45F, 0.15F);
+        GL11.glPopMatrix();
+
+        GL11.glPushMatrix();
+        Float tx = tileEntity.x;
+        GL11.glTranslatef(tx,0.0F,0.0F);
+        GL11.glScalef(0.009f, -0.009f, 0.009f);
+        GL11.glColor4f(1.250F, 0.5F, 1.0F, 0.5F);
+//        fontrenderer.drawString("Hellow_Wurldses",
+//                -fontrenderer.getStringWidth("Hellow_Wurld") / 2,
+//                25,
+//                0);
+//        fontrenderer.drawString(tx+"",
+//                -fontrenderer.getStringWidth(tx+"") / 2,
+//                35,
+//                0);
+        if(stack!=null) {
+            fontrenderer.drawString(tileEntity.inventoryItem.getDisplayName() + "",
+                    -fontrenderer.getStringWidth(tx + "") / 2,
+                    -45,
+                    0);
+            String itemname=(stack.getItem().getUnlocalizedName());
+            if(itemname.contains("writtenBook"))
+            {
+                ItemEditableBook bookitem   =   (ItemEditableBook)stack.getItem();
+                NBTTagCompound nbttagcompound = stack.getTagCompound();
+                String s = "("+nbttagcompound.getString("title")+") "+nbttagcompound.getTagList("pages",8);
+                fontrenderer.drawString(s,
+                        -fontrenderer.getStringWidth(s) / 2,
+                        -22,
+                        0);
+            }
+
+        }
+        GL11.glPopMatrix();
+
+        GL11.glPopMatrix();
+    }
+
 }

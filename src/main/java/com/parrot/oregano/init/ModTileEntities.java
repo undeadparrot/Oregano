@@ -3,7 +3,6 @@ package com.parrot.oregano.init;
 import com.parrot.oregano.Oregano;
 import com.parrot.oregano.tileentity.*;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.tileentity.TileEntity;
 
 /**
  * Created by Shane on 3/14/2015.
@@ -16,7 +15,7 @@ public class ModTileEntities {
         GameRegistry.registerTileEntity(TileEntityCanvas.class,"canvas");
         GameRegistry.registerTileEntity(TileEntityPoster.class,"poster");
         GameRegistry.registerTileEntity(TileEntityBottleRack.class,"bottlerack");
-        GameRegistry.registerTileEntity(TileEntityContainerRotatable.class,"containerrotatable");
+        GameRegistry.registerTileEntity(TileEntityRotatable.class,"containerrotatable");
 
     }
 }

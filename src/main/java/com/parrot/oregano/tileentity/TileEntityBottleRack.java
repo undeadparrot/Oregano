@@ -6,12 +6,11 @@ import com.parrot.oregano.util.LogHelper;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.IModelCustom;
-import scala.tools.nsc.doc.model.Public;
 
 /**
  * Created by Shane on 3/22/2015.
  */
-public class TileEntityBottleRack extends TileEntityContainerRotatable {
+public class TileEntityBottleRack extends TileEntityRotatable {
 
     public String texture="minecraft:textures/blocks/brick.png";
 

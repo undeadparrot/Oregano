@@ -14,7 +14,7 @@ import net.minecraft.block.BlockBush;
 public class ModBlocks {
 
     public static final BlockOregano plaster = new BlockPlaster();
-    public static final BlockBush blob = new BlockBlob();
+    public static final BlockOregano blob = new BlockBlob();
     public static final BlockOregano canvas = new BlockCanvas();
     public static final BlockPoster poster = new BlockPoster();
     public static final BlockMcSignDouble mcsigndouble = new BlockMcSignDouble();
