@@ -20,6 +20,7 @@ public class ModBlocks {
     public static final BlockMcSignDouble mcsigndouble = new BlockMcSignDouble();
     public static final BlockBottleRack bottlerack = new BlockBottleRack();
     public static final BlockContainerRotatable containerrotatable = new BlockContainerRotatable();
+    public static final BlockOregano lectern = new BlockLectern();
 
     public static void init()
     {
@@ -30,6 +31,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(mcsigndouble,"mcsigndouble");
         GameRegistry.registerBlock(bottlerack,"bottlerack");
         GameRegistry.registerBlock(containerrotatable,"containerrotatable");
+        GameRegistry.registerBlock(lectern,"lectern");
     }
 
 }

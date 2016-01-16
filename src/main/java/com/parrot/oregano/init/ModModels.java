@@ -12,5 +12,6 @@ public class ModModels {
 
     public static final IModelCustom easel= AdvancedModelLoader.loadModel(new ResourceLocation(Oregano.MODID.toLowerCase(), "models/Easel.obj"));
     public static final IModelCustom chestBarrelMini= AdvancedModelLoader.loadModel(new ResourceLocation(Oregano.MODID.toLowerCase(), "models/ChestBarrelMini.obj"));
+    public static final IModelCustom lecternDouble= AdvancedModelLoader.loadModel(new ResourceLocation(Oregano.MODID.toLowerCase(), "models/LecternDouble.obj"));
 
 }
