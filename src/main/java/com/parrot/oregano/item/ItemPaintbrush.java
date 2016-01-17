@@ -4,18 +4,24 @@ import com.parrot.oregano.block.BlockCanvas;
 import com.parrot.oregano.tileentity.TileEntityCanvas;
 import com.parrot.oregano.util.BlockHelper;
 import com.parrot.oregano.util.LogHelper;
+import com.sun.org.apache.xpath.internal.operations.Mod;
+import com.sun.xml.internal.bind.v2.model.core.EnumConstant;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.Vec3;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import java.awt.*;
+import java.util.*;
 
 import static com.parrot.oregano.util.IntersectionHelper.intersectLinePlane;
 
@@ -23,6 +29,7 @@ import static com.parrot.oregano.util.IntersectionHelper.intersectLinePlane;
  * Created by Shane on 3/13/2015.
  */
 public class ItemPaintbrush extends ItemOregano {
+
 
     public ItemPaintbrush()
     {
@@ -58,10 +65,16 @@ public class ItemPaintbrush extends ItemOregano {
             {
                 boolean remote=player.worldObj.isRemote;
                 TileEntityCanvas tileEntity= ((TileEntityCanvas) tileEntityGeneric);
-                paintBlock(player.worldObj,player,tileEntity,hit.blockX,hit.blockY,hit.blockZ);
+                paintBlock(player.worldObj,player,tileEntity,hit.blockX,hit.blockY,hit.blockZ );
             }
         }
     }
+
+    @Override
+    public int getItemStackLimit(ItemStack stack) {
+        return 1;
+    }
+
     @Override
     public void onPlayerStoppedUsing(ItemStack p_77615_1_, World p_77615_2_, EntityPlayer p_77615_3_, int p_77615_4_)
     {
@@ -75,7 +88,7 @@ public class ItemPaintbrush extends ItemOregano {
         return false;//continue processing use
     }
     @Override
-    public boolean onItemUse(ItemStack p_77648_1_, EntityPlayer player, World world, int x, int y, int z, int p_77648_7_, float sideX, float sideY, float sideZ)
+    public boolean onItemUse(ItemStack itemStack, EntityPlayer player, World world, int x, int y, int z, int p_77648_7_, float sideX, float sideY, float sideZ)
     {
         ForgeDirection fd = BlockHelper.GetFDFromEntity(player,false);
         LogHelper.info("pbrush>FD "+fd+"__IDinv "+BlockHelper.GetFDFromEntity(player,true));
@@ -92,7 +105,13 @@ public class ItemPaintbrush extends ItemOregano {
         return true;
     }
 
-    private void paintBlock(World world,EntityPlayer player,TileEntityCanvas tileEntity,int x, int y, int z) {
+    private void paintBlock(World world, EntityPlayer player, TileEntityCanvas tileEntity, int x, int y, int z) {
+        ItemStack heldItem = player.getHeldItem();
+        if(!(heldItem.getItem()  instanceof ItemPaintbrush))
+        {
+            return;
+        }
+        int brushColour = CheckGetMakeTag(heldItem).getInteger("colour");
         MovingObjectPosition mop= Minecraft.getMinecraft().objectMouseOver;
         //   Minecraft.getMinecraft().thePlayer.sendChatMessage(sideX+"_"+sideY+"_"+sideZ);
         float eyeHeight=player.getEyeHeight();
@@ -101,6 +120,7 @@ public class ItemPaintbrush extends ItemOregano {
         Vec3 xyz=Vec3.createVectorHelper(x, y, z);
         Vec3 pos=xyz;
         //lookVec.dotProduct()
+
 
         float depth=+0.2F+ BlockCanvas.thickness;
         //+0.05//+0.05//-0.05
@@ -225,7 +245,7 @@ public class ItemPaintbrush extends ItemOregano {
             int pix = pixx + (pixy * tileEntity.width);
             if (tileEntity.data.length >= pix) {
                 //tileEntity.data[pix] = (tileEntity.data[pix] == Color.lightGray.getRGB()) ? Color.yellow.getRGB() : Color.lightGray.getRGB();
-                paintPixels(tileEntity.data ,pixx,pixy,w,h, Color.pink.getRGB(),3   );
+                paintPixels(tileEntity.data ,pixx,pixy,w,h, brushColour,heldItem.getItemDamage()*2   );
                 tileEntity.dirty = true;
                 world.markTileEntityChunkModified(x, y, z, tileEntity);
                 //setBlockBounds(0.0F, 0.0F, 0.0F, 1.5F, 0.50F, 1.0F);
@@ -243,6 +263,9 @@ public class ItemPaintbrush extends ItemOregano {
 
     private void paintPixels(int[] data,int x,int y, int w, int h, int rgb, int radius) {
         int hitx,hity;
+        if(radius<1){
+            radius=1;
+        }
         for (int i=-radius;i<radius;i++)
         {
             for (int j=-radius;j<radius;j++) {
@@ -259,14 +282,131 @@ public class ItemPaintbrush extends ItemOregano {
      * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
      */
     @Override
-    public ItemStack onItemRightClick(ItemStack p_77659_1_, World p_77659_2_, EntityPlayer p_77659_3_)
+    public ItemStack onItemRightClick(ItemStack itemStack, World p_77659_2_, EntityPlayer player)
     {
         //LogHelper.info("pbrush>onItemRightClick");
-        p_77659_3_.setItemInUse(p_77659_1_, this.getMaxItemUseDuration(p_77659_1_));
-        return p_77659_1_;
+        if(player.isInWater()){
+            int brushColour=CheckGetMakeTag(itemStack).getInteger("colour");
+            CheckGetMakeTag(itemStack).setInteger("colour",(new Random()).nextInt());
+        }
+        player.setItemInUse(itemStack, this.getMaxItemUseDuration(itemStack));
+        return itemStack;
     }
 
+    @Override
+    public int getItemStackLimit() {
+        return 1;
+    }
 
+    @SideOnly(Side.CLIENT)
+    private IIcon iconBrush;
+    private IIcon iconTip;
+    private IIcon iconBigBrush;
+    private IIcon iconBigTip;
+    private IIcon iconMediumBrush;
+    private IIcon iconMediumTip;
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister par1IconRegister) {
+        iconBrush = par1IconRegister.registerIcon("oregano:paintbrush");
+        iconTip= par1IconRegister.registerIcon("oregano:paintbrush_tip");
+        iconBigBrush = par1IconRegister.registerIcon("oregano:paintbrush_big");
+        iconBigTip = par1IconRegister.registerIcon("oregano:paintbrush_big_tip");
+        iconMediumBrush = par1IconRegister.registerIcon("oregano:paintbrush_medium");
+        iconMediumTip = par1IconRegister.registerIcon("oregano:paintbrush_medium_tip");
+    }
+
+    /**
+     * Gets an icon index based on an item's damage value and the given render pass
+     */
+    @Override
+    @SideOnly(Side.CLIENT)
+    public IIcon getIconFromDamageForRenderPass(int parDamageVal, int parRenderPass) {
+        if(parRenderPass==0)  {
+            switch(parDamageVal) {
+                case 0:
+                    return iconBrush;
+                case 1:
+                    return iconMediumBrush;
+                case 2:
+                    return iconBigBrush;
+            }
+        }
+        else{
+            switch(parDamageVal) {
+                case 0:
+                    return iconTip;
+                case 1:
+                    return iconMediumTip;
+                case 2:
+                    return iconBigTip;
+            }
+        }
+        return iconBrush;
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public boolean requiresMultipleRenderPasses()
+    {
+        return true;
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getColorFromItemStack(ItemStack itemStack, int parRenderPass) {
+        if(parRenderPass==1) {
+            return (CheckGetMakeTag(itemStack).getInteger("colour"));
+        }
+        return 0xFFFFFF;
+    }
+
+    @Override
+    public boolean getHasSubtypes() {
+        return true;
+    }
+
+    @Override
+    public void getSubItems(Item stack, CreativeTabs tabs, List list) {
+        list.add(new ItemStack(this, 1,0));
+        list.add(new ItemStack(this, 1,1));
+        list.add(new ItemStack(this, 1,2));
+    }
+
+    @Override
+    public void onCreated(ItemStack itemStack, World world, EntityPlayer player) {
+        super.onCreated(itemStack, world, player);
+    }
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack itemStack, EntityPlayer player, java.util.List list, boolean par4)
+    {
+        NBTTagCompound tag = CheckGetMakeTag(itemStack);
+        switch(itemStack.getItemDamage())
+        {
+            case 0:
+                list.add("Size: Small");
+                break;
+            case 1:
+                list.add("Size: Medium");
+                break;
+            case 2:
+                list.add("Size: Large");
+                break;
+        }
+        int redcomponent = tag.getInteger("colour");
+        redcomponent=redcomponent>>4;
+        list.add(EnumChatFormatting.RED+"Red  :"+(tag.getInteger("colour")>>16));
+        list.add(EnumChatFormatting.GREEN+"Green:"+((tag.getInteger("colour")&0x00FF00)>>8));
+        list.add(EnumChatFormatting.BLUE+"Blue :"+(tag.getInteger("colour")&0x0000FF));
+        list.add("Voila!");
+    }
+
+    private NBTTagCompound CheckGetMakeTag(ItemStack itemStack) {
+        if(itemStack.stackTagCompound==null)
+        {
+            itemStack.stackTagCompound=new NBTTagCompound();
+            itemStack.stackTagCompound.setInteger("colour",0xFFFFFF);
+        }
+        return itemStack.stackTagCompound;
+    }
 
 
 }

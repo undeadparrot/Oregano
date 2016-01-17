@@ -663,5 +663,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" scope="RUNTIME" name="Chisel2-2.5.1.44" level="project" />
   </component>
 </module>

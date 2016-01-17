@@ -185,4 +185,13 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
+  <component name="libraryTable">
+    <library name="Chisel2-2.5.1.44">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/libs/Chisel2-2.5.1.44.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
 </project>

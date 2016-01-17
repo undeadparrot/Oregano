@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemEditableBook;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemWritableBook;
 import net.minecraft.nbt.NBTTagCompound;
@@ -25,12 +26,16 @@ import net.minecraftforge.client.model.obj.*;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
+import java.awt.font.TextAttribute;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.awt.image.WritableRaster;
+import java.util.*;
 
 import static com.parrot.oregano.util.RenderHelper.RenderModelPartWithIcon;
 import static com.parrot.oregano.util.RenderHelper.RenderModelWithIcon;
+
+
 
 /**
  * Created by smatu on 1/13/2016.
@@ -38,11 +43,6 @@ import static com.parrot.oregano.util.RenderHelper.RenderModelWithIcon;
 public class TileEntityLectern extends TileEntityContainerRotatable {
     public int pageNumber=0;
     public TileEntityLectern() {
-        if(Loader.isModLoaded("chisel"))
-        {
-            LogHelper.info("Chisel present");
-
-        }
     }
 
     @Override
@@ -75,64 +75,85 @@ public class TileEntityLectern extends TileEntityContainerRotatable {
         IIcon materialitemicon= Blocks.planks.getBlockTextureFromSide(0);
         RenderModelPartWithIcon(model, materialitemicon,"Base");
 
-        tesr.bindTexturePublic(new ResourceLocation("oregano", "textures/gui/papertex.png"));
-        model.renderPart( "BookPaper");
-
-        DynamicTexture dynamicTexture=new DynamicTexture(256, 256);//bufferedImage);;
-        BufferedImage bmp=new java.awt.image.BufferedImage(256,256, BufferedImage.TYPE_INT_RGB);
-        Graphics gfx = bmp.getGraphics();
-        gfx.setColor(Color.BLACK);
-        Font f=new Font("Gamaliel",Font.PLAIN,15);
-        gfx.setFont(f);
-        gfx.drawString("Rose, she is red",18,24);
-        gfx.drawString("The violets, they be blue",18,48);
-        gfx.drawString("This would be a rhyme",18,72);
-        gfx.drawString("If this line rhymed with blue",18,96);
-        gfx.drawString("I once sang a sonnet",18,120);
-        gfx.drawString("But the sonnet played me",18,148);
-        gfx.drawString("I should not have done't",18,172);
-        gfx.drawString("But I couldn't leave't be",18,196);
-
-        WritableRaster raster = bmp.getRaster();
-        int[] imgdata=((DataBufferInt)raster.getDataBuffer()).getData();
-        TextureUtil.uploadTexture(dynamicTexture.getGlTextureId(), imgdata, 256, 256);
-        GL11.glBindTexture(GL11.GL_TEXTURE_2D,dynamicTexture.getGlTextureId());
-
-        model.renderPart("BookPaper");
-
-        dynamicTexture.deleteGlTexture();
-
         TileEntityLectern lectern = (TileEntityLectern)entity;
         ItemStack stack= lectern.inventoryItems[0];
 
-        if(stack!=null && stack.getItem() instanceof ItemWritableBook) {
+        if(stack!=null && (stack.getItem() instanceof ItemWritableBook || stack.getItem() instanceof ItemEditableBook)) {
+
+            materialitemicon= Blocks.hardened_clay.getBlockTextureFromSide(0);
+            RenderModelPartWithIcon(model, materialitemicon,"BookCover");
+
+            tesr.bindTexturePublic(new ResourceLocation("oregano", "textures/gui/papertex.png"));
+            model.renderPart( "BookPaper");
 
             NBTTagCompound nbttagcompound = stack.getTagCompound();
-            String s = ((NBTTagList)nbttagcompound.getTagList("pages", 8)).getStringTagAt(0)+"";
+            NBTTagList pages = (NBTTagList)nbttagcompound.getTagList("pages", 8);
+            DynamicTexture dynamicTexture=new DynamicTexture(480, 320);//bufferedImage);;
+            BufferedImage bmp=new java.awt.image.BufferedImage(480,320, BufferedImage.TYPE_INT_RGB);
+            Graphics gfx = bmp.getGraphics();
+            gfx.setColor(Color.BLACK);
+            Font f=new Font("Gamaliel",Font.PLAIN,19);
+            Map<TextAttribute, Object> attributes = new HashMap<TextAttribute, Object>();
+            attributes.put(TextAttribute.TRACKING, 0.05);
+            f = f.deriveFont(attributes);
+            gfx.setFont(f);
+            gfx.setClip(0,0,240,320);
 
-            float pageAngle=3.0F;
+            int pageNumber=lectern.pageNumber;
 
-            GL11.glPushMatrix();
-            GL11.glTranslatef(0.200F,0.8F,1.65F);
-            GL11.glPushMatrix();
-            GL11.glRotatef(-pageAngle,0.0F,1.0F,-1.0F);
-            GL11.glRotatef(-45.0F,1.0F,0.0F,0.0F);
+            FontRenderer fontrenderer = tesr.func_147498_b();
+            int textheight= 28;
+            int lineheight=21;
 
-            drawPageText(tesr,  s);
-            GL11.glPopMatrix();
-            GL11.glPopMatrix();
+            String s = (pages).getStringTagAt(pageNumber)+"";
 
+            while (s != null && s.endsWith("\n"))
+            {
+                s = s.substring(0, s.length() - 1);
+            }
 
-            GL11.glPushMatrix();
-            GL11.glTranslatef(01.20F,0.8F,1.7F);
-            GL11.glPushMatrix();
-            GL11.glRotatef(pageAngle,0.0F,1.0F,-1.0F);
-            GL11.glRotatef(-45.0F,1.0F,0.0F,0.0F);
+            java.util.List list = fontrenderer.listFormattedStringToWidth(s, 116);
 
-            drawPageText(tesr,  s);
-            GL11.glPopMatrix();
-            GL11.glPopMatrix();
+            for (Iterator iterator = list.iterator(); iterator.hasNext(); textheight += lineheight)
+            {
+                String s1 = (String)iterator.next();
+                gfx.drawString(s1,18,textheight);
 
+            }
+
+            gfx.drawString((pageNumber+1)+"",(240/2)-(gfx.getFontMetrics().stringWidth(pageNumber+"")/2),305);
+            gfx.setClip(0,0,480,320);
+
+            pageNumber++;
+            if (pages.tagCount()>=pageNumber+1) {
+                s = (pages).getStringTagAt(pageNumber)+"";
+
+                while (s != null && s.endsWith("\n"))
+                {
+                    s = s.substring(0, s.length() - 1);
+                }
+
+                list = fontrenderer.listFormattedStringToWidth(s, 116);
+                textheight=24;
+
+                for (Iterator iterator = list.iterator(); iterator.hasNext(); textheight += lineheight)
+                {
+                    String s1 = (String)iterator.next();
+                    gfx.drawString(s1,240+18,textheight);
+
+                }
+
+                gfx.drawString((pageNumber+1)+"",360-(gfx.getFontMetrics().stringWidth(pageNumber+"")/2),305);
+            }
+
+            WritableRaster raster = bmp.getRaster();
+            int[] imgdata=((DataBufferInt)raster.getDataBuffer()).getData();
+            TextureUtil.uploadTexture(dynamicTexture.getGlTextureId(), imgdata, 480, 320);
+            GL11.glBindTexture(GL11.GL_TEXTURE_2D,dynamicTexture.getGlTextureId());
+
+            model.renderPart("BookText");
+
+            dynamicTexture.deleteGlTexture();
 
         }
 

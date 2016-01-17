@@ -5,6 +5,7 @@ import com.parrot.oregano.network.message.MessageTileEntityBlob;
 import com.parrot.oregano.tileentity.TileEntityBottleRack;
 import com.parrot.oregano.tileentity.TileEntityContainerRotatable;
 import com.parrot.oregano.tileentity.TileEntityLectern;
+import com.parrot.oregano.util.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
@@ -54,7 +55,7 @@ public class BlockLectern extends BlockContainerRotatable  {
                 tileEntity.inventoryItems[0] = player.getHeldItem().copy();
                 tileEntity.inventoryItems[0].stackSize = 1;
                 player.getHeldItem().stackSize--;
-                tileEntity.dirty = true;
+                ((TileEntityLectern)tileEntity).pageNumber=0;
             } else if (player.isSneaking() &&null != tileEntity.inventoryItems[0]) {
                 EntityItem entItem = new EntityItem(world, x, y, z, tileEntity.inventoryItems[0].copy());
                 //entItem.
@@ -70,15 +71,8 @@ public class BlockLectern extends BlockContainerRotatable  {
                 tileEntity.inventoryItems[0] = null;
             }
             else{
-                if(!player.isSneaking())
-                {
-                    ((TileEntityLectern)tileEntity).pageNumber++;
-                }
-                else
-                {
-                    ((TileEntityLectern)tileEntity).pageNumber++;
-
-                }
+                    ((TileEntityLectern)tileEntity).pageNumber+=2;
+                    LogHelper.info("Lectern turned to page "+((TileEntityLectern)tileEntity).pageNumber);
             }
             tileEntity.dirty = true;
             world.markTileEntityChunkModified(x, y, z, tileEntity);
