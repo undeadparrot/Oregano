@@ -1,16 +1,15 @@
 package com.parrot.oregano.gui.guiscreen;
 
+import com.parrot.oregano.util.LinedTextBuffer;
 import com.parrot.oregano.util.LogHelper;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
-import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraftforge.client.event.GuiScreenEvent;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.util.ChatAllowedCharacters;
 import org.lwjgl.input.Mouse;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Created by Shane on 3/22/2015.
@@ -27,6 +26,10 @@ public class GuiPoster extends GuiScreen {
     GuiTextField txtLine1;
 
     String[] textLines=new String[9];
+
+    LinedTextBuffer content ;
+    int cursorRow=0;
+    int cursorCol=0;
 
     public GuiPoster()
     {
@@ -47,15 +50,11 @@ public class GuiPoster extends GuiScreen {
         //
 
         textLines[0]="Line 1";
-        textLines[1]="Line 2";
-        textLines[2]="Line 3";
-        textLines[3]="Line 4";
-        textLines[4]="Line 5";
-        textLines[5]="Line 6";
-        textLines[6]="Line 7";
-        textLines[7]="Line 8";
-        textLines[8]="Line 9";
 
+        content= new LinedTextBuffer("",fontRendererObj,201 );
+
+        content.text+=("Roses are red\nChocolate cookies are brownishorangey, oh so tasty\nViolets are a little red\n");
+        content.UpdateLinesFromText();
     }
 
     @Override
@@ -79,48 +78,145 @@ public class GuiPoster extends GuiScreen {
         int guiLeft=(width-guiWidth)/2;
         int guiTop=(int)((height*2*0.32));
 
-        drawString(fontRendererObj,"Candy Cane Cone",32,32, Color.pink.getRGB());
+        //drawRect(32,32,guiLeft+32,guiTop+32,Color.PINK.getRGB());
+        //drawString(fontRendererObj,"Candy Cane Cone",32,32, Color.pink.getRGB());
 
         txtLine1.xPosition=guiLeft;
         txtLine1.yPosition=guiTop;
 
-        txtLine1.drawTextBox();
+        drawTextContent();
 
-        GuiTextField txtAbove=new GuiTextField(fontRendererObj,guiLeft,guiTop-16,guiWidth,12);
-        if(line>0) {
-            txtAbove.setText(textLines[line - 1]);
-            txtAbove.drawTextBox();
-        }
-        GuiTextField txtBelow=new GuiTextField(fontRendererObj,guiLeft,guiTop+28,guiWidth,12);
-        if(line<textLines.length-1) {
-            txtBelow.setText(textLines[line + 1]);
-            txtBelow.drawTextBox();
-        }
+//        GuiTextField txtAbove=new GuiTextField(fontRendererObj,guiLeft,guiTop-16,guiWidth,12);
+//        if(line>0) {
+//            txtAbove.setText(textLines[line - 1]);
+//            txtAbove.drawTextBox();
+//        }
+//        GuiTextField txtBelow=new GuiTextField(fontRendererObj,guiLeft,guiTop+28,guiWidth,12);
+//        if(line<textLines.length-1) {
+//            txtBelow.setText(textLines[line + 1]);
+//            txtBelow.drawTextBox();
+//        }
         super.drawScreen(x, y, ticks);
+
+    }
+
+    private void drawTextContent() {
+
+        int left=32;
+        int top=32;
+        int fonth=11;
+
+        if(content.lines.size()==0)
+        {
+            content.UpdateLinesFromText();
+            return;
+        }
+        int cursortop = top+(cursorRow*fonth);
+        cursorCol=Math.min(content.lines.get(cursorRow).length(),cursorCol);
+        cursorRow=Math.min(content.lines.size(),cursorRow);
+        int widthofleftstring=fontRendererObj.getStringWidth(content.lines.get(cursorRow).substring(0,cursorCol));
+        int cursorleft=left+(widthofleftstring)-1;
+        drawRect(cursorleft,cursortop,cursorleft+3,cursortop+fonth,Color.YELLOW.getRGB());
+
+        //txtLine1.drawTextBox();
+        for (int i=0;i<content.lines.size();i++){
+            String s = content.lines.get(i);
+            drawString(fontRendererObj,s,left,top+(i*fonth),Color.LIGHT_GRAY.getRGB());
+        }
 
     }
 
     @Override
     protected void keyTyped(char key, int keyboardCode)
     {
-        txtLine1.textboxKeyTyped(key, keyboardCode);
-        LogHelper.info(key+"_"+keyboardCode);
-        switch(keyboardCode) {
-            case 200:
-                scrollLines(1);
-                break;
-            case 208 :
-                scrollLines(-1);
-                break;
-            case 28:
-                if( (textLines.length) != line+1 ) {
-                    scrollLines(-1);
-                }
-                else{
-                    this.mc.displayGuiScreen((GuiScreen)null);
-                    this.mc.setIngameFocus();
-                }
-                break;
+        try{
+
+            txtLine1.textboxKeyTyped(key, keyboardCode);
+            LogHelper.info(key+"_"+keyboardCode);
+            String s="";
+            int lineCount=content.lines.size();
+            int currentcursorx=fontRendererObj.getStringWidth(content.lines.get(cursorRow).substring(0,cursorCol));
+            switch(keyboardCode) {
+                case 205:
+                    if(cursorCol<content.lines.get(cursorRow).length()-1)   {cursorCol++;}
+                    break;
+                case 203 :
+                    if(cursorCol>0)   {cursorCol--;}
+                    break;
+                case 200:
+                    if(cursorRow>0)   {cursorRow--;}
+                    cursorCol= getColInString(content.lines.get(cursorRow),currentcursorx);
+                    break;
+                case 208 :
+                    if(cursorRow<content.lines.size()-1)   {cursorRow++;}
+                    cursorCol= getColInString(content.lines.get(cursorRow),currentcursorx);
+                    break;
+                case 211:
+                    if(content.lines.get(cursorRow).length()>cursorCol+1)
+                    {
+                         s = content.lines.get(cursorRow).substring(0,cursorCol)+content.lines.get(cursorRow).substring(cursorCol+1);
+                        content.ReplaceLine(cursorRow,s);
+
+                    }
+                    else{
+                        if(cursorRow<content.lines.size()-1)
+                        {
+                            s = content.lines.get(cursorRow).substring(0,content.lines.get(cursorRow).length()-1);
+                            content.ReplaceLine(cursorRow,s);
+                        }
+
+                    }
+                    break;
+                case 14:
+                    if(cursorCol<1 && cursorRow==0) {
+                        return;
+                    }
+                    if((cursorCol==0)){
+                        if(cursorRow>=1) {
+                            int currentlinelengthbefore=content.lines.get(cursorRow-1).length()-1;
+                            s = content.lines.get(cursorRow - 1).substring(0, content.lines.get(cursorRow - 1).length()-1) ;
+                            content.ReplaceLine(cursorRow-1, s);
+                            cursorRow--;
+                            cursorCol=currentlinelengthbefore;
+                        }
+                    }
+                    else{
+                        s = content.lines.get(cursorRow).substring(0,cursorCol-1)+content.lines.get(cursorRow).substring(cursorCol);
+                        content.ReplaceLine(cursorRow,s);
+                        cursorCol--;
+                    }
+                    break;
+                case 199 :
+                    cursorCol=0;
+                    break;
+                case 207 :
+                    cursorCol=content.lines.get(cursorRow).length()-1;
+                    break;
+                case 28:
+                    s = content.lines.get(cursorRow).substring(0,cursorCol)+"\n"+content.lines.get(cursorRow).substring(cursorCol);
+                    content.ReplaceLine(cursorRow,s);
+                    cursorCol=0;
+                    if(content.lines.size()>lineCount){
+                        cursorRow++;
+                    }
+
+                    break;
+                default:
+                    if(ChatAllowedCharacters.isAllowedCharacter(key))
+                    {
+                        //int positionOfStartOfRow= content.linesStringPositions.get(cursorRow);
+                        s = content.lines.get(cursorRow).substring(0,cursorCol)+Character.toString(key)+content.lines.get(cursorRow).substring(cursorCol);
+                        content.ReplaceLine(cursorRow,s);
+                        cursorCol++;
+                        if(content.lines.size()>lineCount){
+                            cursorRow++;
+                        }
+                    }
+            }
+
+        }
+        catch(Exception exception){
+            LogHelper.info(exception);
         }
         super.keyTyped(key,keyboardCode);
 
@@ -129,6 +225,23 @@ public class GuiPoster extends GuiScreen {
     @Override
     protected void mouseClicked(int x, int y, int mouseButton)
     {
+
+        int left=32;
+        int top=32;
+        int fonth=11;
+
+        int clickedrow = (y-top)/(fonth);
+        if(clickedrow<content.lines.size()&&clickedrow>=0)
+        {
+            String s = content.lines.get(clickedrow);
+            int clickedcol= getColInString(s,x-left);
+            //int widthofleftstring=fontRendererObj.getStringWidth(content.get(cursorRow).substring(0,cursorCol));
+            //int cursorleft=left+(widthofleftstring)-1;
+            cursorRow=clickedrow;
+            cursorCol=clickedcol;
+        }
+
+
 
 
         if((x>txtLine1.xPosition&&x<(txtLine1.xPosition+txtLine1.width))
@@ -148,6 +261,19 @@ public class GuiPoster extends GuiScreen {
         }
 
         super.mouseClicked(x,y,mouseButton);
+    }
+
+    private int getColInString(String s, int x) {
+        int accumulatedwidth=0;
+        int i=0;
+        for (i=0;i<s.length();i++)
+        {
+            accumulatedwidth+=fontRendererObj.getCharWidth(s.charAt(i));
+            if(x<accumulatedwidth){
+                return i;
+            }
+        }
+        return i;
     }
 
     @Override

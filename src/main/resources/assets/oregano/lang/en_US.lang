@@ -1,8 +1,9 @@
 item.oregano:desertRose.name=Desert Rose
 item.oregano:paintbrush.name=Paintbrush
+item.oregano:canvas.name=Painting Canvas
 tile.oregano:plaster.name=Plaster Block
 tile.oregano:blob.name=Blob Block
-tile.oregano:canvas.name=Painting Canvas
+tile.oregano:canvas.name=Easel
 tile.oregano:poster.name=Poster
 tile.oregano:mcsigndouble.name=Centre Sign
 tile.oregano:bottlerack.name=Bottle Rack

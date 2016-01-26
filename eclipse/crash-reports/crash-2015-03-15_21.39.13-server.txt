@@ -5,7 +5,7 @@ Time: 3/15/15 9:39 PM
 Description: Ticking memory connection
 
 java.lang.ArrayIndexOutOfBoundsException: 27
-	at com.parrot.oregano.block.BlockCanvas.onBlockActivated(BlockCanvas.java:69)
+	at com.parrot.oregano.block.BlockEasel.onBlockActivated(BlockCanvas.java:69)
 	at net.minecraft.server.management.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:409)
 	at net.minecraft.network.NetHandlerPlayServer.processPlayerBlockPlacement(NetHandlerPlayServer.java:593)
 	at net.minecraft.network.play.client.C08PacketPlayerBlockPlacement.processPacket(C08PacketPlayerBlockPlacement.java:74)
@@ -24,7 +24,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 
 -- Head --
 Stacktrace:
-	at com.parrot.oregano.block.BlockCanvas.onBlockActivated(BlockCanvas.java:69)
+	at com.parrot.oregano.block.BlockEasel.onBlockActivated(BlockCanvas.java:69)
 	at net.minecraft.server.management.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:409)
 	at net.minecraft.network.NetHandlerPlayServer.processPlayerBlockPlacement(NetHandlerPlayServer.java:593)
 	at net.minecraft.network.play.client.C08PacketPlayerBlockPlacement.processPacket(C08PacketPlayerBlockPlacement.java:74)

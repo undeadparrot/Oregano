@@ -12,7 +12,7 @@ public class ModTileEntities {
 
     public static void init() {
         GameRegistry.registerTileEntity(TileEntityBlob.class,"blob");
-        GameRegistry.registerTileEntity(TileEntityCanvas.class,"canvas");
+        GameRegistry.registerTileEntity(TileEntityEasel.class,"canvas");
         GameRegistry.registerTileEntity(TileEntityPoster.class,"poster");
         GameRegistry.registerTileEntity(TileEntityBottleRack.class,"bottlerack");
         GameRegistry.registerTileEntity(TileEntityContainerRotatable.class,"containerrotatable");

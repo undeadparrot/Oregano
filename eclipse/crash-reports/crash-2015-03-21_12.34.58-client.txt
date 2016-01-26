@@ -33,11 +33,11 @@ Stacktrace:
 
 -- Block Entity Details --
 Details:
-	Name: canvas // com.parrot.oregano.tileentity.TileEntityCanvas
-	Block type: ID #169 (tile.oregano:canvas // com.parrot.oregano.block.BlockCanvas)
+	Name: canvas // com.parrot.oregano.tileentity.TileEntityEasel
+	Block type: ID #169 (tile.oregano:canvas // com.parrot.oregano.block.BlockEasel)
 	Block data value: 0 / 0x0 / 0b0000
 	Block location: World: (-107,101,268), Chunk: (at 5,6,12 in -7,16; contains blocks -112,0,256 to -97,255,271), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
-	Actual block type: ID #169 (tile.oregano:canvas // com.parrot.oregano.block.BlockCanvas)
+	Actual block type: ID #169 (tile.oregano:canvas // com.parrot.oregano.block.BlockEasel)
 	Actual block data value: 0 / 0x0 / 0b0000
 Stacktrace:
 	at net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher.renderTileEntityAt(TileEntityRendererDispatcher.java:141)

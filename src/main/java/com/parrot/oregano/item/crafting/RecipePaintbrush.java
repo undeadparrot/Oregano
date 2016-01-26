@@ -15,7 +15,7 @@ import net.minecraftforge.oredict.OreDictionary;
 /**
  * Created by smatu on 1/17/2016.
  */
-public class PaintbrushRecipe implements IRecipe {
+public class RecipePaintbrush implements IRecipe {
     ItemStack itemstackPaintbrush=null;
     ItemStack itemstackDye = null;
 
@@ -90,24 +90,38 @@ public class PaintbrushRecipe implements IRecipe {
 
     @Override
     public ItemStack getCraftingResult(InventoryCrafting inv) {
-        ItemStack result = new ItemStack(ModItems.paintbrush,1);
-        NBTTagCompound tag=itemstackDye.getTagCompound();
+        ItemStack result = new ItemStack(ModItems.paintbrush,1,itemstackPaintbrush.getItemDamage());
+        NBTTagCompound oldtag=itemstackPaintbrush.getTagCompound();
+        NBTTagCompound newtag=new NBTTagCompound();
         int currentcolour=0xFFFFFF;
-        if(tag==null)
+        if(oldtag==null)
         {
-            tag = new NBTTagCompound();
+            oldtag = new NBTTagCompound();
         }else{
-            currentcolour=tag.getInteger("colour");
+            currentcolour=oldtag.getInteger("colour");
         }
-        tag.setInteger("colour",getBlendedIntRGB(currentcolour,getIntRGBFromDye(itemstackDye)));
-        result.setTagCompound(tag);
+        newtag.setInteger("colour",getBlendedIntRGB(currentcolour,getIntRGBFromDye(itemstackDye)));
+        result.setTagCompound(newtag);
 
 
         return (ItemStack)result;
     }
 
     private int getBlendedIntRGB(int col1, int col2) {
-        return (col1/2)+(col2/2);
+        int r1 = col1>>16;
+        int g1 = (col1&0x00ff00)>>8;
+        int b1 = col1&0x0000ff;
+        int r2 = col2>>16;
+        int g2 = (col2&0x00ff00)>>8;
+        int b2 = col2&0x0000ff;
+        int r = (r1/2)+(r2/2);
+        int g = (g1/2)+(g2/2);
+        int b = (b1/2)+(b2/2);
+        int colour =0x00000000;
+        colour=colour|(r<<16);
+        colour=colour|(g<<8);
+        colour=colour|(b);
+        return (colour);
     }
 
     public int getIntFromRGB(int[] rgb)
@@ -126,7 +140,7 @@ public class PaintbrushRecipe implements IRecipe {
 
 
             if(ore==oreBlack) return 0x191616;
-            if(ore==oreRed) return 0xFF963430;
+            if(ore==oreRed) return 0x963430;
             if(ore==oreGreen) return 0x35461B;
             if(ore==oreBrown) return 0x4F321F;
             if(ore==oreBlue) return 0x2E388D;
@@ -154,6 +168,6 @@ public class PaintbrushRecipe implements IRecipe {
 
     @Override
     public ItemStack getRecipeOutput() {
-        return new ItemStack(ModItems.paintbrush,1);
+        return new ItemStack(ModItems.paintbrush,1,itemstackPaintbrush.getItemDamage());
     }
 }

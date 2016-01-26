@@ -5,7 +5,7 @@ Time: 3/15/15 6:32 PM
 Description: Unexpected error
 
 java.lang.ArrayIndexOutOfBoundsException: 268
-	at com.parrot.oregano.block.BlockCanvas.onBlockActivated(BlockCanvas.java:69)
+	at com.parrot.oregano.block.BlockEasel.onBlockActivated(BlockCanvas.java:69)
 	at net.minecraft.client.multiplayer.PlayerControllerMP.onPlayerRightClick(PlayerControllerMP.java:376)
 	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1518)
 	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2033)
@@ -27,7 +27,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 
 -- Head --
 Stacktrace:
-	at com.parrot.oregano.block.BlockCanvas.onBlockActivated(BlockCanvas.java:69)
+	at com.parrot.oregano.block.BlockEasel.onBlockActivated(BlockCanvas.java:69)
 	at net.minecraft.client.multiplayer.PlayerControllerMP.onPlayerRightClick(PlayerControllerMP.java:376)
 	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1518)
 

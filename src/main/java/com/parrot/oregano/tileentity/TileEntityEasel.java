@@ -3,8 +3,10 @@ package com.parrot.oregano.tileentity;
 import com.parrot.oregano.network.PacketHandler;
 import com.parrot.oregano.network.message.MessageTileEntityCanvas;
 import com.parrot.oregano.util.LogHelper;
+import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
@@ -20,10 +22,12 @@ import java.util.Map;
 /**
  * Created by Shane on 3/15/2015.
  */
-public class TileEntityCanvas extends TileEntityOregano {
+public class TileEntityEasel extends TileEntityContainerRotatable {
 
     public int width = 32;
     public int height= 32;
+    public float canvasHeight= 0.3F;
+    public float canvasWidth= 0.3F;
     public int[] data;
 
     public Vec3 testPosition;
@@ -36,7 +40,7 @@ public class TileEntityCanvas extends TileEntityOregano {
 
     //public static Vec3 planeP1=Vec3.createVectorHelper(1.0F,1.0F)
 
-    public TileEntityCanvas()
+    public TileEntityEasel()
     {
         data=new int[width*height];
         for(int i=0;i<width*height;i++)
@@ -95,6 +99,39 @@ public class TileEntityCanvas extends TileEntityOregano {
         list[0]=AxisAlignedBB.getBoundingBox(0.0F,0.0F,0.0F,0.2F,0.25F,0.5F);
         list[1]=AxisAlignedBB.getBoundingBox(0.4F,0.0F,0.15F,0.25F,0.25F,0.25F);
         return list ;
+    }
+
+    public float[] getCanvasSize(){
+        if(inventoryItems[0]==null){
+            return new float[]{1.0F,1.0F,16F};
+        }
+        NBTTagCompound tag = inventoryItems[0].getTagCompound();
+        return new float[]{tag.getFloat("w"),tag.getFloat("h"),tag.getFloat("res")};
+    }
+
+    @Override
+    public int howManyInvSlots() {
+        return 1;
+    }
+
+    @Override
+    public void NbtAfterParty(NBTTagCompound nbt) {
+        super.NbtAfterParty(nbt);
+    }
+
+    @Override
+    public void NbtPreParty(NBTTagCompound nbt) {
+        super.NbtPreParty(nbt);
+    }
+
+    @Override
+    public void PacketAfterParty(ByteBuf buf) {
+        super.PacketAfterParty(buf);
+    }
+
+    @Override
+    public void PacketPreParty(ByteBuf buf) {
+        super.PacketPreParty(buf);
     }
 
 

@@ -1,13 +1,11 @@
 package com.parrot.oregano.client.render;
 
 import com.google.common.collect.Maps;
-import com.parrot.oregano.tileentity.TileEntityCanvas;
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.util.ResourceLocation;
 
-import java.awt.image.BufferedImage;
 import java.util.Map;
 
 /**
